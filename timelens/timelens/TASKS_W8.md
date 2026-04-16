@@ -149,13 +149,13 @@ portfolio/
 ### Week 7（本周）
 - [ ] 组员A：完成UI评估，确定是否重构
 - [ ] 组员B：准备硬件Demo道具
-- [ ] 组员C：搭建Portfolio框架，完成Persona初稿
+- [x] 组员C：搭建Portfolio框架，完成Persona初稿
 - [ ] 组员D：联系测试用户，安排测试时间
 
 ### Week 8上半周
 - [ ] 组员A：功能完善，Bug修复
 - [ ] 组员B：3D优化，Demo脚本
-- [ ] 组员C：完成Journey Map + Design Alternatives
+- [x] 组员C：完成Journey Map + Design Alternatives
 - [ ] 组员D：完成用户测试，整理数据
 
 ### Week 8 Demo前
@@ -196,10 +196,10 @@ git merge memberA-ui
 | LocalStorage数据持久化 | 组员A | ✅ |
 | 3D展示正常 | 组员B | ✅ |
 | 硬件Demo道具准备 | 组员B | ☐ |
-| GitHub Pages Portfolio | 组员C | ☐ |
-| 2个Personas | 组员C | ☐ |
-| User Journey Map | 组员C | ☐ |
-| Design Alternatives文档 | 组员C | ☐ |
+| GitHub Pages Portfolio | 组员C | ✅ |
+| 2个Personas | 组员C | ✅ |
+| User Journey Map | 组员C | ✅ |
+| Design Alternatives文档 | 组员C | ✅ |
 | 用户测试报告 | 组员D | ☐ |
 | Week 8 Poster | 组员D | ☐ |
 

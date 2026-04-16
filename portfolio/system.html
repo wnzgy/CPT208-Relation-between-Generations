@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System - TimeLens Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">TimeLens</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="system.html" class="active">System</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="container">
+      <div class="section-header" style="padding-top: 2rem;">
+        <h2>System Implementation</h2>
+        <p>Technical architecture and working prototype</p>
+      </div>
+
+      <!-- System Architecture -->
+      <div class="card">
+        <h3>🏗️ System Architecture</h3>
+        <img src="assets/diagrams/system-architecture.svg" alt="System Architecture" style="width: 100%; border-radius: 0.5rem; margin-top: 1rem;">
+        
+        <div class="grid-2" style="margin-top: 2rem;">
+          <div>
+            <h4>Frontend Layer</h4>
+            <ul class="feature-list">
+              <li>React 19 + Vite</li>
+              <li>React Three Fiber (3D)</li>
+              <li>Tailwind CSS 4</li>
+              <li>Lucide React Icons</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Interaction Layer</h4>
+            <ul class="feature-list">
+              <li>Web NFC API</li>
+              <li>QR Code Scanner (html5-qrcode)</li>
+              <li>Touch & Gesture Support</li>
+              <li>Haptic Feedback</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Data Layer</h4>
+            <ul class="feature-list">
+              <li>LocalStorage Persistence</li>
+              <li>Memory Object Schema</li>
+              <li>Message Thread Storage</li>
+              <li>User Preference Storage</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Hardware Layer</h4>
+            <ul class="feature-list">
+              <li>NFC Tags (NTAG213/215)</li>
+              <li>Mobile Phone (Android/iOS)</li>
+              <li>Physical Keepsakes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Screenshots</h2>
+        <p>Key screens from the working prototype</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>📱 NFC Scan Interface</h3>
+          <img src="assets/images/screen-scan.png" alt="NFC Scan Interface" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Select from available keepsakes, tap the NFC button to simulate scan, view locked/unlocked status.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🔄 Scanning Animation</h3>
+          <img src="assets/images/screen-scanning.jpg" alt="Scanning Animation" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Animated loading spinner, "Syncing Reality" text, smooth transition to memory view.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎲 3D Memory View</h3>
+          <img src="assets/images/screen-memory.png" alt="3D Memory View" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Interactive 3D model with orbit controls, floating story card with year/title/story, user role toggle.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>💬 Message Interface</h3>
+          <img src="assets/images/screen-messages.png" alt="Message Interface" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Color-coded messages (grandchild=blue, grandparent=amber), quick reply suggestions, timestamp display.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🗺️ Memory Map</h3>
+          <img src="assets/images/screen-map.png" alt="Memory Map" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Visual collection progress, locked/unlocked memory cards, quick actions for each memory.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>➕ Create Memory</h3>
+          <img src="assets/images/screen-create.png" alt="Create Memory" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
+          <p style="margin-top: 1rem; color: var(--text-secondary);">
+            <strong>Features:</strong> Item name input, year selector, story textarea, quick fill templates, save button.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo Video -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Demo Video</h2>
+        <p>Watch TimeLens in action</p>
+      </div>
+
+      <div class="card">
+        <h3>🎬 Video Demo</h3>
+        <div class="placeholder" style="aspect-ratio: 16/9; display: flex; flex-direction: column; justify-content: center;">
+          <div class="placeholder-icon">🎥</div>
+          <p>Embed your demo video here</p>
+          <small style="color: var(--text-secondary);">
+            Options:<br>
+            1. Upload to YouTube/Vimeo and embed<br>
+            2. Upload MP4 directly to GitHub and use &lt;video&gt; tag<br>
+            3. Link to external video file
+          </small>
+        </div>
+        
+        <div style="margin-top: 1.5rem;">
+          <h4>Video Demo Script</h4>
+          <ol style="margin-left: 1.5rem; color: var(--text-secondary);">
+            <li><strong>Introduction (10s):</strong> Show TimeLens logo and tagline</li>
+            <li><strong>The Hook (15s):</strong> Present physical keepsake (e.g., pocket watch)</li>
+            <li><strong>NFC Scan (15s):</strong> Tap phone to NFC tag, show scanning animation</li>
+            <li><strong>Memory Reveal (20s):</strong> 3D model appears, story card displays</li>
+            <li><strong>Message (15s):</strong> Send a message from grandchild to grandparent</li>
+            <li><strong>Map View (10s):</strong> Show collection progress</li>
+            <li><strong>Create Memory (15s):</strong> Demonstrate adding a new keepsake</li>
+            <li><strong>Closing (10s):</strong> Show tagline and team info</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Technical Details</h2>
+        <p>Implementation notes and challenges</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>⚡ Performance Optimizations</h3>
+          <ul class="feature-list">
+            <li>Lazy loading for 3D models</li>
+            <li>Canvas dpr limiting for mobile</li>
+            <li>LocalStorage batch updates</li>
+            <li>CSS animation for scanning state</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>♿ Accessibility Considerations</h3>
+          <ul class="feature-list">
+            <li>Large touch targets (44px min)</li>
+            <li>High contrast color ratios</li>
+            <li>Clear visual hierarchy</li>
+            <li>Reduced motion support</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🔧 Challenges & Solutions</h3>
+          <p style="color: var(--text-secondary);">
+            <strong>Challenge:</strong> Web NFC API only works on Android Chrome<br>
+            <strong>Solution:</strong> Added QR code fallback for iOS devices
+          </p>
+          <p style="color: var(--text-secondary); margin-top: 1rem;">
+            <strong>Challenge:</strong> 3D performance on low-end phones<br>
+            <strong>Solution:</strong> Reduced polygon count, simplified materials
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📦 Dependencies</h3>
+          <pre style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-size: 0.85rem;"><code>{
+  "react": "^19.2.4",
+  "@react-three/fiber": "^9.5.0",
+  "@react-three/drei": "^10.7.7",
+  "three": "^0.183.2",
+  "lucide-react": "^0.577.0",
+  "tailwindcss": "^4.2.2"
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Try It -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Try TimeLens</h2>
+        <p>Experience the prototype yourself</p>
+      </div>
+
+      <div class="card" style="text-align: center; padding: 3rem;">
+        <h3>🚀 Live Demo</h3>
+        <p style="color: var(--text-secondary); margin: 1.5rem 0;">
+          Access the working prototype online. Best experienced on mobile devices with NFC support.
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wnzgy.github.io/CPT208-Relation-between-Generations/timelens/" 
+             class="btn" 
+             target="_blank">
+            Open Live Demo ↗
+          </a>
+          <a href="https://wnzgy.github.io/CPT208-Relation-between-Generations/timelens/?demo=video" 
+             class="btn" 
+             target="_blank"
+             style="background: var(--accent); color: var(--bg-dark);">
+            Video Demo Mode ↗
+          </a>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1rem; background: rgba(79, 70, 229, 0.1); border-radius: 1rem; text-align: left;">
+          <h4 style="margin-bottom: 0.5rem;">💡 Demo Tips:</h4>
+          <ul style="margin-left: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+            <li>Use mobile phone for best experience (10:19.5 ratio optimized)</li>
+            <li>Video Demo Mode: Auto-play presentation with <code>?demo=video</code></li>
+            <li>NFC Tools: Access tag programming interface</li>
+            <li>Switch user: Toggle between grandchild/grandparent views</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+      <a href="https://github.com/wnzgy/CPT208-Relation-between-Generations" target="_blank" style="color: var(--primary-light);">View on GitHub ↗</a>
+    </p>
+  </footer>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
+    <img id="lightbox-img" src="" alt="Enlarged view" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+      document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+        img.addEventListener('click', function() {
+          if (this.src) openLightbox(this.src);
+        });
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+      window.closeLightbox = closeLightbox;
+    })();
+  </script>
+</body>
+</html>

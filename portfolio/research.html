@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - TimeLens Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">TimeLens</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="system.html">System</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section class="container">
+      <div class="section-header" style="padding-top: 2rem;">
+        <h2>User Research</h2>
+        <p>Understanding our target users and their needs</p>
+      </div>
+
+      <!-- Research Methods -->
+      <div class="card">
+        <h3>🔍 Research Methods</h3>
+        <div class="grid-2" style="margin-top: 1.5rem;">
+          <div>
+            <h4>Literature Review</h4>
+            <p style="color: var(--text-secondary);">Studied existing intergenerational communication tools and identified gaps in current solutions.</p>
+          </div>
+          <div>
+            <h4>Contextual Inquiry</h4>
+            <p style="color: var(--text-secondary);">Observed family interactions and how stories are naturally shared during gatherings.</p>
+          </div>
+          <div>
+            <h4>Competitive Analysis</h4>
+            <p style="color: var(--text-secondary);">Analyzed family history apps, digital archives, and tangible interfaces.</p>
+          </div>
+          <div>
+            <h4>Expert Review</h4>
+            <p style="color: var(--text-secondary);">Consulted with HCI researchers on best practices for tangible interaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personas Section -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Personas</h2>
+        <p>Representative users that guide our design decisions</p>
+      </div>
+
+      <!-- Persona 1: Grandparent -->
+      <div class="persona-card">
+        <div class="persona-avatar">👴</div>
+        <div class="persona-info">
+          <h3>王明德 (Wang Mingde)</h3>
+          <div class="persona-meta">68岁 · 退休工程师 · 祖父</div>
+          
+          <div class="persona-details">
+            <div>
+              <div class="label">技术熟练度</div>
+              <p>中等 - 会用微信视频通话，能独立使用智能手机，但对新App学习较慢</p>
+            </div>
+            <div>
+              <div class="label">目标</div>
+              <p>想和孙子分享年轻时的故事，让家族历史不被遗忘</p>
+            </div>
+            <div>
+              <div class="label">痛点</div>
+              <p>不知道如何用现代方式记录家族历史；觉得传统方式太复杂</p>
+            </div>
+            <div>
+              <div class="label">使用场景</div>
+              <p>周末孙子来访时，拿出老怀表讲述背后的故事</p>
+            </div>
+            <div>
+              <div class="label">Quote</div>
+              <p style="font-style: italic; color: var(--accent);">"这块怀表见证了我年轻时坐轮船出国的经历，我想让小宇知道那时的故事。"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Persona 2: Grandchild -->
+      <div class="persona-card">
+        <div class="persona-avatar">👦</div>
+        <div class="persona-info">
+          <h3>李宇轩 (Li Yuxuan)</h3>
+          <div class="persona-meta">12岁 · 小学生 · 孙子</div>
+          
+          <div class="persona-details">
+            <div>
+              <div class="label">技术熟练度</div>
+              <p>高 - 从小接触手机和平板，熟练使用各种App和游戏</p>
+            </div>
+            <div>
+              <div class="label">目标</div>
+              <p>想了解爷爷年轻时的故事，但希望方式有趣不枯燥</p>
+            </div>
+            <div>
+              <div class="label">痛点</div>
+              <p>觉得长辈讲故事方式太单调；传统家族档案太文字化，缺乏互动感</p>
+            </div>
+            <div>
+              <div class="label">使用场景</div>
+              <p>看到爷爷的怀表好奇背后的故事，想通过有趣的方式了解</p>
+            </div>
+            <div>
+              <div class="label">Quote</div>
+              <p style="font-style: italic; color: var(--accent);">"爷爷的怀表看起来很酷，但我不知道它有什么故事。如果能像游戏一样解锁就好了！"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Journey Map -->
+    <section class="container">
+      <div class="section-header">
+        <h2>User Journey Map</h2>
+        <p>From problem to solution - the current vs. ideal experience</p>
+      </div>
+
+      <div class="card">
+        <h3>Current State (Without TimeLens)</h3>
+        <div class="journey-map" style="margin-top: 1.5rem;">
+          <div class="journey-stages">
+            <div class="journey-stage">
+              <div class="stage-num">1</div>
+              <h4>发现物件</h4>
+              <p>孩子看到老物件，产生好奇心</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">2</div>
+              <h4>询问故事</h4>
+              <p>孩子问"这是什么？"</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">3</div>
+              <h4>口头讲述</h4>
+              <p>长辈口头讲述，孩子容易分心</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">4</div>
+              <h4>互动有限</h4>
+              <p>孩子听完就忘记</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">5</div>
+              <h4>故事流失</h4>
+              <p>没有记录，故事随时间消失</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 1rem;">
+          <strong style="color: #ef4444;">Pain Points:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>孙辈觉得长辈讲故事方式枯燥</li>
+            <li>长辈不知道如何用现代方式记录</li>
+            <li>缺乏跨代沟通的桥梁</li>
+            <li>珍贵的家族记忆没有持久保存</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Future State (With TimeLens)</h3>
+        <div class="journey-map" style="margin-top: 1.5rem;">
+          <div class="journey-stages">
+            <div class="journey-stage">
+              <div class="stage-num">1</div>
+              <h4>发现物件</h4>
+              <p>看到带NFC标签的老物件</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">2</div>
+              <h4>扫描解锁</h4>
+              <p>用手机轻触标签，"解锁"记忆</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">3</div>
+              <h4>3D体验</h4>
+              <p>观看3D展示和故事动画</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">4</div>
+              <h4>互动留言</h4>
+              <p>发送留言给长辈</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">5</div>
+              <h4>收藏回顾</h4>
+              <p>在地图中收藏和回顾</p>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 1rem;">
+          <strong style="color: #10b981;">Benefits:</strong>
+          <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: var(--text-secondary);">
+            <li>游戏化的"解锁"体验吸引孩子</li>
+            <li>3D可视化让故事更生动</li>
+            <li>双向留言促进跨代交流</li>
+            <li>家族记忆永久保存，随时回顾</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 TimeLens Team - CPT208 Relation Between Generations</p>
+  </footer>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
+    <img id="lightbox-img" src="" alt="Enlarged view" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+      document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+        img.addEventListener('click', function() {
+          if (this.src) openLightbox(this.src);
+        });
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+      window.closeLightbox = closeLightbox;
+    })();
+  </script>
+</body>
+</html>

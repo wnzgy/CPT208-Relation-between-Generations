@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TimeLens - Process Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">TimeLens</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="system.html">System</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>TimeLens</h1>
+        <p class="subtitle">A playful intergenerational memory portal</p>
+        <p class="tagline">From keepsake to conversation</p>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Project Overview</h2>
+        <p>CPT208 - Relation Between Generations</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>🎯 Problem</h3>
+          <p>Family stories stay hidden inside everyday objects. Children can see the keepsake, but not the memory behind it. Many existing tools feel archival and text-heavy.</p>
+        </div>
+        
+        <div class="card">
+          <h3>💡 Solution</h3>
+          <p>TimeLens turns a physical object into a playful story portal. Tap an NFC-tagged family keepsake to unlock a visual memory reveal and leave a lightweight reply across generations.</p>
+        </div>
+
+        <div class="card">
+          <h3>👥 Target Users</h3>
+          <ul class="feature-list">
+            <li>Grandparents (60+) who want to share family stories</li>
+            <li>Grandchildren (10-15) curious about family history</li>
+            <li>Parents bridging the generational gap</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🔧 Technologies</h3>
+          <ul class="feature-list">
+            <li>Web NFC API for tangible interaction</li>
+            <li>React Three Fiber for 3D visualization</li>
+            <li>Responsive mobile-first design</li>
+            <li>LocalStorage for data persistence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Team Members</h2>
+        <p>Group B4-1</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>👨‍💻 组员A - 前端开发</h3>
+          <p>UI重构、移动端适配、二维码扫描功能</p>
+        </div>
+        
+        <div class="card">
+          <h3>🎲 组员B - 3D/硬件</h3>
+          <p>3D模型优化、实体道具准备、演示脚本</p>
+        </div>
+        
+        <div class="card">
+          <h3>📝 组员C - 设计/文档</h3>
+          <p>Personas、Journey Map、Portfolio网站</p>
+        </div>
+        
+        <div class="card">
+          <h3>🧪 组员D - 测试/Poster</h3>
+          <p>用户测试、Poster制作、演示视频</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Explore Our Work</h2>
+      </div>
+
+      <div class="grid-3">
+        <a href="research.html" class="card" style="text-decoration: none; color: inherit;">
+          <h3>🔍 Research</h3>
+          <p>User research, Personas, and Journey Maps documenting our understanding of the target users.</p>
+          <span style="color: var(--primary-light);">View →</span>
+        </a>
+
+        <a href="design.html" class="card" style="text-decoration: none; color: inherit;">
+          <h3>✏️ Design Process</h3>
+          <p>Crazy 8s sketches, Design Alternatives comparison, and Low-Fi prototypes showing our design evolution.</p>
+          <span style="color: var(--primary-light);">View →</span>
+        </a>
+
+        <a href="system.html" class="card" style="text-decoration: none; color: inherit;">
+          <h3>⚙️ System</h3>
+          <p>System architecture, screenshots, demo video, and technical implementation details.</p>
+          <span style="color: var(--primary-light);">View →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Built with ❤️ for Week 8 Demo Day</p>
+  </footer>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
+    <img id="lightbox-img" src="" alt="Enlarged view" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+      document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
+        img.addEventListener('click', function() {
+          if (this.src) openLightbox(this.src);
+        });
+      });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
+      window.closeLightbox = closeLightbox;
+    })();
+  </script>
+</body>
+</html>
