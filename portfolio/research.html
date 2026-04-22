@@ -51,8 +51,10 @@
             <h4>Literature Alignment</h4>
             <p class="muted">
               We aligned our protocol with prior work on tangible memory sharing, family memory curation,
-              and intergenerational interaction design [R1][R2][R3]. We also considered reflective memory
-              interfaces and slow technology principles for sustained engagement [R4][R5].
+              and intergenerational interaction design
+              <a class="cite-link" href="#r1">[R1]</a><a class="cite-link" href="#r2">[R2]</a><a class="cite-link" href="#r3">[R3]</a>.
+              We also considered reflective memory interfaces and slow technology principles for sustained engagement
+              <a class="cite-link" href="#r4">[R4]</a><a class="cite-link" href="#r5">[R5]</a>.
             </p>
           </div>
         </div>
@@ -84,7 +86,10 @@
           </div>
           <div class="spotlight-card">
             <h3 style="margin-bottom:0.45rem;">Overall Study Signal</h3>
-            <p class="muted">Cross-role adoption is strong when interaction starts from a real keepsake [R1][R2].</p>
+            <p class="muted">
+              Cross-role adoption is strong when interaction starts from a real keepsake
+              <a class="cite-link" href="#r1">[R1]</a><a class="cite-link" href="#r2">[R2]</a>.
+            </p>
             <p style="margin-top:0.6rem;"><span class="mini-kpi" id="st-success">--</span> task success</p>
           </div>
         </div>
@@ -176,7 +181,6 @@
             <tbody id="sample-table-body"></tbody>
           </table>
         </div>
-        <p class="table-note">Dataset file: <code>assets/data/survey-sample-50.json</code> (50 participants).</p>
       </div>
     </section>
 
@@ -202,48 +206,51 @@
           </div>
           <div class="spotlight-card">
             <h3>Implication 4: Support Reflective Revisits</h3>
-            <p class="muted">Timeline and map views are intentionally designed for revisitation, not only single-session tasks [R4][R5].</p>
+            <p class="muted">
+              Timeline and map views are intentionally designed for revisitation, not only single-session tasks
+              <a class="cite-link" href="#r4">[R4]</a><a class="cite-link" href="#r5">[R5]</a>.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="referenced-papers">
       <div class="section-header">
         <h2>Referenced Papers</h2>
         <p>Five papers used to justify research framing and design choices</p>
       </div>
 
       <div class="paper-grid">
-        <article class="paper-card">
+        <article class="paper-card" id="r1">
           <h4>[R1] Supporting Intergenerational Memento Storytelling for Older Adults</h4>
           <div class="paper-meta">Li et al., Personal and Ubiquitous Computing, 2022</div>
           <p class="muted">Used for tangible appraisal mechanism design and confidence support for older adults.</p>
           <a class="paper-link" href="https://doi.org/10.1007/s00779-020-01364-9" target="_blank" rel="noopener noreferrer">DOI link</a>
         </article>
 
-        <article class="paper-card">
+        <article class="paper-card" id="r2">
           <h4>[R2] Co-constructing Family Memory</h4>
           <div class="paper-meta">Jones & Ackerman, CHI, 2018</div>
           <p class="muted">Used for collaborative family memory curation and cross-generation participation rationale.</p>
           <a class="paper-link" href="https://doi.org/10.1145/3173574.3173998" target="_blank" rel="noopener noreferrer">DOI link</a>
         </article>
 
-        <article class="paper-card">
+        <article class="paper-card" id="r3">
           <h4>[R3] Family Memories in the Home: Physical vs Digital Mementos</h4>
           <div class="paper-meta">Petrelli & Whittaker, Personal and Ubiquitous Computing, 2010</div>
           <p class="muted">Used to justify why TimeLens starts from physical keepsakes instead of pure digital archive entry.</p>
           <a class="paper-link" href="https://doi.org/10.1007/s00779-009-0279-7" target="_blank" rel="noopener noreferrer">DOI link</a>
         </article>
 
-        <article class="paper-card">
+        <article class="paper-card" id="r4">
           <h4>[R4] Visual Mementos: Reflecting Memories with Personal Data</h4>
           <div class="paper-meta">Thudt et al., IEEE TVCG, 2016</div>
           <p class="muted">Used for memory visualization and reflection-oriented interface decisions.</p>
           <a class="paper-link" href="https://doi.org/10.1109/TVCG.2015.2467831" target="_blank" rel="noopener noreferrer">DOI link</a>
         </article>
 
-        <article class="paper-card">
+        <article class="paper-card" id="r5">
           <h4>[R5] Designing for Slowness, Anticipation and Re-visitation</h4>
           <div class="paper-meta">Odom et al., CHI, 2014</div>
           <p class="muted">Used to support long-term engagement design instead of one-time novelty interaction.</p>
@@ -286,6 +293,11 @@
     function updateText(id, value) {
       const el = document.getElementById(id);
       if (el) el.textContent = value;
+    }
+
+    function updateHtml(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = value;
     }
 
     function roleSubset(data, role) {
@@ -381,17 +393,17 @@
           `The prototype reached ${pct(success, total).toFixed(1)}% task success. Story appeal (${avgStory.toFixed(2)}/5) and reply intent (${avgReply.toFixed(2)}/5) support intergenerational communication feasibility.`
         );
 
-        updateText(
+        updateHtml(
           'analysis-1',
-          `NFC ease averages ${avgNfc.toFixed(2)}/5, supporting object-first entry design [R1][R3].`
+          `NFC ease averages ${avgNfc.toFixed(2)}/5, supporting object-first entry design <a class="cite-link" href="#r1">[R1]</a><a class="cite-link" href="#r3">[R3]</a>.`
         );
-        updateText(
+        updateHtml(
           'analysis-2',
-          `Reply intent averages ${avgReply.toFixed(2)}/5, so the messaging loop remains a core interaction [R2].`
+          `Reply intent averages ${avgReply.toFixed(2)}/5, so the messaging loop remains a core interaction <a class="cite-link" href="#r2">[R2]</a>.`
         );
-        updateText(
+        updateHtml(
           'analysis-3',
-          `Average completion time is ${Math.round(avgTime)}s with recommendation ${avgRecommend.toFixed(2)}/10, indicating low-friction onboarding matters [R5].`
+          `Average completion time is ${Math.round(avgTime)}s with recommendation ${avgRecommend.toFixed(2)}/10, indicating low-friction onboarding matters <a class="cite-link" href="#r5">[R5]</a>.`
         );
 
         const body = document.getElementById('sample-table-body');
@@ -412,7 +424,7 @@
         `;
         }).join('');
       } catch (error) {
-        updateText('insight-text', 'Unable to load the dataset file. Please verify assets/data/survey-sample-50.json.');
+        updateText('insight-text', 'Unable to load the dataset right now. Please refresh this page.');
       }
     }
 
