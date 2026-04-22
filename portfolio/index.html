@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <div class="logo">TimeLens</div>
@@ -16,13 +15,12 @@
         <li><a href="research.html">Research</a></li>
         <li><a href="design.html">Design</a></li>
         <li><a href="system.html">System</a></li>
+        <li><a href="#prototype">Prototype</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <div class="container">
         <h1>TimeLens</h1>
@@ -31,137 +29,140 @@
       </div>
     </section>
 
-    <!-- Project Overview -->
     <section class="container">
       <div class="section-header">
         <h2>Project Overview</h2>
-        <p>CPT208 - Relation Between Generations</p>
+        <p>CPT208 - Relation Between Generations | Group B4-1</p>
       </div>
 
       <div class="grid-2">
         <div class="card">
-          <h3>🎯 Problem</h3>
-          <p>Family stories stay hidden inside everyday objects. Children can see the keepsake, but not the memory behind it. Many existing tools feel archival and text-heavy.</p>
-        </div>
-        
-        <div class="card">
-          <h3>💡 Solution</h3>
-          <p>TimeLens turns a physical object into a playful story portal. Tap an NFC-tagged family keepsake to unlock a visual memory reveal and leave a lightweight reply across generations.</p>
+          <h3>Problem</h3>
+          <p>Family stories are often attached to physical keepsakes, but those stories are rarely preserved in an engaging way for younger generations.</p>
         </div>
 
         <div class="card">
-          <h3>👥 Target Users</h3>
+          <h3>Solution</h3>
+          <p>TimeLens combines NFC-tagged objects, playful 3D memory reveal, and lightweight messaging to support two-way storytelling across generations.</p>
+        </div>
+
+        <div class="card">
+          <h3>Target Users</h3>
           <ul class="feature-list">
-            <li>Grandparents (60+) who want to share family stories</li>
-            <li>Grandchildren (10-15) curious about family history</li>
-            <li>Parents bridging the generational gap</li>
+            <li>Grandparents who want to pass down stories</li>
+            <li>Grandchildren who prefer interactive learning</li>
+            <li>Parents as communication bridge builders</li>
           </ul>
         </div>
 
         <div class="card">
-          <h3>🔧 Technologies</h3>
-          <ul class="feature-list">
-            <li>Web NFC API for tangible interaction</li>
-            <li>React Three Fiber for 3D visualization</li>
-            <li>Responsive mobile-first design</li>
-            <li>LocalStorage for data persistence</li>
-          </ul>
+          <h3>Deliverables</h3>
+          <span class="pill">Questionnaire + 50 samples</span>
+          <span class="pill">Data statistics dashboard</span>
+          <span class="pill">Design process portfolio</span>
+          <span class="pill">Web prototype entry</span>
         </div>
       </div>
     </section>
 
-    <!-- Team Section -->
+    <section class="container" id="prototype">
+      <div class="section-header">
+        <h2>Prototype</h2>
+        <p>Open the interactive product prototype directly from GitHub Pages</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <h3>Try the Live Prototype</h3>
+        <p class="muted" style="margin-bottom: 1rem;">This is the same Vite/React prototype as the local server version, built as static files for one-click review.</p>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem;">
+          <a class="btn" href="prototype/index.html" target="_blank">Open Prototype</a>
+          <a class="btn btn-secondary" href="prototype/index.html?demo=video" target="_blank">Open Demo Mode</a>
+        </div>
+
+        <div class="highlight-box" style="text-align: left; margin-top: 1.3rem;">
+          <strong>Review path:</strong>
+          <p class="muted" style="margin-top: 0.35rem;">After deployment, the direct URL is <code>https://wnzgy.github.io/CPT208-Relation-between-Generations/prototype/</code>.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="container">
       <div class="section-header">
         <h2>Team Members</h2>
-        <p>Group B4-1</p>
+        <p>Official names, IDs, and responsibilities</p>
       </div>
 
-      <div class="grid-2">
+      <div class="team-grid">
         <div class="card">
-          <h3>👨‍💻 组员A - 前端开发</h3>
-          <p>UI重构、移动端适配、二维码扫描功能</p>
+          <h3>Member A - Chenlong Wei</h3>
+          <div class="member-id">Student ID: 2363235</div>
+          <ul class="feature-list">
+            <li>Frontend implementation and responsive adaptation</li>
+            <li>QR / scan fallback integration</li>
+            <li>Prototype interaction polish</li>
+          </ul>
         </div>
-        
+
         <div class="card">
-          <h3>🎲 组员B - 3D/硬件</h3>
-          <p>3D模型优化、实体道具准备、演示脚本</p>
+          <h3>Member B - Zixuan Wang</h3>
+          <div class="member-id">Student ID: 2363717</div>
+          <ul class="feature-list">
+            <li>3D optimization and hardware demo preparation</li>
+            <li>NFC tangible workflow setup</li>
+            <li>Demo script for live presentation</li>
+          </ul>
         </div>
-        
+
         <div class="card">
-          <h3>📝 组员C - 设计/文档</h3>
-          <p>Personas、Journey Map、Portfolio网站</p>
+          <h3>Member C - Puwei Fan</h3>
+          <div class="member-id">Student ID: 2362997</div>
+          <ul class="feature-list">
+            <li>Personas, journey map, and design documentation</li>
+            <li>Portfolio website structure and content editing</li>
+            <li>Research synthesis and storytelling flow</li>
+          </ul>
         </div>
-        
+
         <div class="card">
-          <h3>🧪 组员D - 测试/Poster</h3>
-          <p>用户测试、Poster制作、演示视频</p>
+          <h3>Member D - Wenhe Li</h3>
+          <div class="member-id">Student ID: 2364596</div>
+          <ul class="feature-list">
+            <li>User testing and questionnaire operations</li>
+            <li>Poster production and presentation media</li>
+            <li>Evaluation summary and final review checks</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Quick Links -->
     <section class="container">
       <div class="section-header">
-        <h2>Explore Our Work</h2>
+        <h2>Explore the Portfolio</h2>
       </div>
 
-      <div class="grid-3">
-        <a href="research.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>🔍 Research</h3>
-          <p>User research, Personas, and Journey Maps documenting our understanding of the target users.</p>
-          <span style="color: var(--primary-light);">View →</span>
+      <div class="quick-links">
+        <a href="research.html" class="quick-link-card">
+          <h3>Research & Survey</h3>
+          <p class="muted">Questionnaire design, 50-sample dataset, and statistical insights.</p>
         </a>
 
-        <a href="design.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>✏️ Design Process</h3>
-          <p>Crazy 8s sketches, Design Alternatives comparison, and Low-Fi prototypes showing our design evolution.</p>
-          <span style="color: var(--primary-light);">View →</span>
+        <a href="design.html" class="quick-link-card">
+          <h3>Design Process</h3>
+          <p class="muted">Crazy 8s, alternatives, rationale, and iterative decisions.</p>
         </a>
 
-        <a href="system.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>⚙️ System</h3>
-          <p>System architecture, screenshots, demo video, and technical implementation details.</p>
-          <span style="color: var(--primary-light);">View →</span>
+        <a href="system.html" class="quick-link-card">
+          <h3>System & Demo</h3>
+          <p class="muted">Architecture, screenshots, prototype entry, and implementation notes.</p>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2024 TimeLens Team - CPT208 Relation Between Generations</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">Built with ❤️ for Week 8 Demo Day</p>
+    <p>© 2026 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p style="margin-top: 0.45rem;">Group B4-1 | Portfolio in English for submission consistency</p>
   </footer>
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
-    <img id="lightbox-img" src="" alt="Enlarged view" onclick="event.stopPropagation()">
-  </div>
-  <script>
-    (function() {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      function openLightbox(src) {
-        lightboxImg.src = src;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeLightbox() {
-        lightbox.classList.remove('active');
-        lightboxImg.src = '';
-        document.body.style.overflow = '';
-      }
-      document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
-        img.addEventListener('click', function() {
-          if (this.src) openLightbox(this.src);
-        });
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeLightbox();
-      });
-      window.closeLightbox = closeLightbox;
-    })();
-  </script>
 </body>
 </html>

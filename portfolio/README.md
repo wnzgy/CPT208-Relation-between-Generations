@@ -1,4 +1,4 @@
-# TimeLens Portfolio
+﻿# TimeLens Portfolio
 
 Process Portfolio for CPT208 - Relation Between Generations
 
@@ -44,7 +44,7 @@ python3 generate_lowfi.py
 
 ### 3. Add App Screenshots
 
-1. Take screenshots of the TimeLens app (or ask 组员A for them)
+1. Take screenshots of the TimeLens app (or ask Member A for them)
 2. Save to `assets/images/`
 3. In `system.html`, replace `.svg` placeholders with real images:
    ```html
@@ -122,8 +122,8 @@ git push upstream main
 - [x] Low-Fi prototypes generated (mobile wireframe + user flow)
 - [x] Persona details finalized
 - [x] Design alternatives rationale complete
-- [ ] App screenshots added (pending 组员A)
-- [ ] Demo video embedded or linked (pending 组员D)
+- [ ] App screenshots added (pending Member A)
+- [ ] Demo video embedded or linked (pending Member D)
 - [ ] All links working
 - [ ] Mobile responsive tested
 

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- Navigation -->
   <nav>
     <div class="nav-container">
       <div class="logo">TimeLens</div>
@@ -16,242 +15,411 @@
         <li><a href="research.html" class="active">Research</a></li>
         <li><a href="design.html">Design</a></li>
         <li><a href="system.html">System</a></li>
+        <li><a href="index.html#prototype">Prototype</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <section class="container">
-      <div class="section-header" style="padding-top: 2rem;">
-        <h2>User Research</h2>
-        <p>Understanding our target users and their needs</p>
+      <div class="section-header" style="padding-top: 1.4rem;">
+        <h2>User Research and Questionnaire</h2>
+        <p>Methods, sample design, and statistical evidence</p>
       </div>
 
-      <!-- Research Methods -->
       <div class="card">
-        <h3>🔍 Research Methods</h3>
-        <div class="grid-2" style="margin-top: 1.5rem;">
+        <h3>Research Methods</h3>
+        <div class="grid-2" style="margin-top: 0.8rem;">
           <div>
-            <h4>Literature Review</h4>
-            <p style="color: var(--text-secondary);">Studied existing intergenerational communication tools and identified gaps in current solutions.</p>
+            <h4>Context Observation</h4>
+            <p class="muted">Observed family story-sharing moments around keepsakes to understand real trigger points for interaction.</p>
           </div>
           <div>
-            <h4>Contextual Inquiry</h4>
-            <p style="color: var(--text-secondary);">Observed family interactions and how stories are naturally shared during gatherings.</p>
+            <h4>Semi-Structured Interview</h4>
+            <p class="muted">Collected pain points from three generations about preserving memories and maintaining conversation continuity.</p>
           </div>
           <div>
-            <h4>Competitive Analysis</h4>
-            <p style="color: var(--text-secondary);">Analyzed family history apps, digital archives, and tangible interfaces.</p>
+            <h4>Questionnaire Validation</h4>
+            <p class="muted">Used a 50-participant survey to validate usability, attractiveness, and communication value.</p>
           </div>
           <div>
-            <h4>Expert Review</h4>
-            <p style="color: var(--text-secondary);">Consulted with HCI researchers on best practices for tangible interaction.</p>
+            <h4>Prototype Walkthrough</h4>
+            <p class="muted">Measured task success rate and completion time through a controlled first-use flow.</p>
           </div>
         </div>
       </div>
+
+      <div class="card">
+        <h3>Questionnaire Structure (50 Samples)</h3>
+        <p class="muted">Scale: 1 (very low) to 5 (very high), recommendation score: 0-10.</p>
+        <div class="grid-2" style="margin-top: 0.9rem;">
+          <div>
+            <h4>Core Questions</h4>
+            <ul class="feature-list">
+              <li>How easy is the NFC tap / unlock step?</li>
+              <li>How engaging is the 3D memory reveal?</li>
+              <li>How willing are you to leave a reply message?</li>
+              <li>Can you complete the first key task independently?</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Background Fields</h4>
+            <ul class="feature-list">
+              <li>Role (Grandchild / Parent / Grandparent)</li>
+              <li>Age group and story-sharing frequency</li>
+              <li>Task completion time (seconds)</li>
+              <li>Recommendation score and short comment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Statistical Summary</h3>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">Samples</div>
+            <div class="kpi-value" id="kpi-samples">--</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Task Success</div>
+            <div class="kpi-value" id="kpi-success">--</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg. NFC Ease</div>
+            <div class="kpi-value" id="kpi-nfc">--</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg. Story Appeal</div>
+            <div class="kpi-value" id="kpi-story">--</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg. Reply Intent</div>
+            <div class="kpi-value" id="kpi-reply">--</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">Avg. Task Time</div>
+            <div class="kpi-value" id="kpi-time">--</div>
+          </div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h4>Participant Mix by Role</h4>
+            <div id="role-bars"></div>
+          </div>
+
+          <div class="chart-card">
+            <h4>Recommendation Distribution</h4>
+            <div class="donut" id="recommend-donut">
+              <div class="donut-center" id="recommend-center">--</div>
+            </div>
+            <div class="legend" id="recommend-legend"></div>
+          </div>
+
+          <div class="chart-card">
+            <h4>Usability Indicators</h4>
+            <div id="indicator-bars"></div>
+          </div>
+        </div>
+
+        <div class="highlight-box highlight-success">
+          <strong>Key takeaway:</strong>
+          <p class="muted" id="insight-text" style="margin-top: 0.35rem;">Loading survey insights...</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Sample Records (Anonymized Preview)</h3>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Role</th>
+                <th>Age Group</th>
+                <th>NFC Ease</th>
+                <th>Story Appeal</th>
+                <th>Reply Intent</th>
+                <th>Task Success</th>
+                <th>Time (s)</th>
+                <th>Recommend</th>
+              </tr>
+            </thead>
+            <tbody id="sample-table-body"></tbody>
+          </table>
+        </div>
+        <p class="table-note">Dataset file: <code>assets/data/survey-sample-50.json</code> (50 participants).</p>
+      </div>
     </section>
 
-    <!-- Personas Section -->
     <section class="container">
       <div class="section-header">
         <h2>Personas</h2>
-        <p>Representative users that guide our design decisions</p>
+        <p>Representative users used in design decisions</p>
       </div>
 
-      <!-- Persona 1: Grandparent -->
       <div class="persona-card">
         <div class="persona-avatar">👴</div>
-        <div class="persona-info">
-          <h3>王明德 (Wang Mingde)</h3>
-          <div class="persona-meta">68岁 · 退休工程师 · 祖父</div>
-          
+        <div>
+          <h3>Mingde Wang</h3>
+          <div class="persona-meta">68 | Retired engineer | Grandfather</div>
           <div class="persona-details">
             <div>
-              <div class="label">技术熟练度</div>
-              <p>中等 - 会用微信视频通话，能独立使用智能手机，但对新App学习较慢</p>
+              <div class="label">Technical Comfort</div>
+              <p>Medium. Uses smartphone and video calls but prefers simple, guided interactions.</p>
             </div>
             <div>
-              <div class="label">目标</div>
-              <p>想和孙子分享年轻时的故事，让家族历史不被遗忘</p>
+              <div class="label">Goal</div>
+              <p>Share meaningful family stories so younger generations remember their roots.</p>
             </div>
             <div>
-              <div class="label">痛点</div>
-              <p>不知道如何用现代方式记录家族历史；觉得传统方式太复杂</p>
-            </div>
-            <div>
-              <div class="label">使用场景</div>
-              <p>周末孙子来访时，拿出老怀表讲述背后的故事</p>
+              <div class="label">Pain Point</div>
+              <p>Traditional digital archives feel complicated and not emotionally engaging.</p>
             </div>
             <div>
               <div class="label">Quote</div>
-              <p style="font-style: italic; color: var(--accent);">"这块怀表见证了我年轻时坐轮船出国的经历，我想让小宇知道那时的故事。"</p>
+              <p style="font-style: italic; color: var(--accent);">"I want the story behind my keepsakes to be remembered, not just the object itself."</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Persona 2: Grandchild -->
       <div class="persona-card">
         <div class="persona-avatar">👦</div>
-        <div class="persona-info">
-          <h3>李宇轩 (Li Yuxuan)</h3>
-          <div class="persona-meta">12岁 · 小学生 · 孙子</div>
-          
+        <div>
+          <h3>Yuxuan Li</h3>
+          <div class="persona-meta">12 | Student | Grandchild</div>
           <div class="persona-details">
             <div>
-              <div class="label">技术熟练度</div>
-              <p>高 - 从小接触手机和平板，熟练使用各种App和游戏</p>
+              <div class="label">Technical Comfort</div>
+              <p>High. Comfortable with mobile interaction, visual content, and gamified flows.</p>
             </div>
             <div>
-              <div class="label">目标</div>
-              <p>想了解爷爷年轻时的故事，但希望方式有趣不枯燥</p>
+              <div class="label">Goal</div>
+              <p>Learn family stories through playful interaction, not long text explanation.</p>
             </div>
             <div>
-              <div class="label">痛点</div>
-              <p>觉得长辈讲故事方式太单调；传统家族档案太文字化，缺乏互动感</p>
-            </div>
-            <div>
-              <div class="label">使用场景</div>
-              <p>看到爷爷的怀表好奇背后的故事，想通过有趣的方式了解</p>
+              <div class="label">Pain Point</div>
+              <p>One-way storytelling is easy to forget and difficult to revisit after family gatherings.</p>
             </div>
             <div>
               <div class="label">Quote</div>
-              <p style="font-style: italic; color: var(--accent);">"爷爷的怀表看起来很酷，但我不知道它有什么故事。如果能像游戏一样解锁就好了！"</p>
+              <p style="font-style: italic; color: var(--accent);">"If I can unlock stories like a game, I will want to explore more keepsakes."</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- User Journey Map -->
     <section class="container">
       <div class="section-header">
-        <h2>User Journey Map</h2>
-        <p>From problem to solution - the current vs. ideal experience</p>
+        <h2>Journey Comparison</h2>
+        <p>Current pain flow vs. TimeLens-supported flow</p>
       </div>
 
       <div class="card">
-        <h3>Current State (Without TimeLens)</h3>
-        <div class="journey-map" style="margin-top: 1.5rem;">
+        <h3>Current Flow (Without TimeLens)</h3>
+        <div class="journey-map" style="margin-top: 0.8rem;">
           <div class="journey-stages">
             <div class="journey-stage">
               <div class="stage-num">1</div>
-              <h4>发现物件</h4>
-              <p>孩子看到老物件，产生好奇心</p>
+              <h4>Find Object</h4>
+              <p>A child notices an old keepsake.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">2</div>
-              <h4>询问故事</h4>
-              <p>孩子问"这是什么？"</p>
+              <h4>Ask Briefly</h4>
+              <p>One short question is asked.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">3</div>
-              <h4>口头讲述</h4>
-              <p>长辈口头讲述，孩子容易分心</p>
+              <h4>Verbal Story</h4>
+              <p>The story is spoken once and fades quickly.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">4</div>
-              <h4>互动有限</h4>
-              <p>孩子听完就忘记</p>
+              <h4>No Follow-up</h4>
+              <p>Limited interaction after the moment.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">5</div>
-              <h4>故事流失</h4>
-              <p>没有记录，故事随时间消失</p>
+              <h4>Memory Loss</h4>
+              <p>Stories are not preserved or revisited.</p>
             </div>
           </div>
         </div>
-        
-        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 1rem;">
-          <strong style="color: #ef4444;">Pain Points:</strong>
-          <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: var(--text-secondary);">
-            <li>孙辈觉得长辈讲故事方式枯燥</li>
-            <li>长辈不知道如何用现代方式记录</li>
-            <li>缺乏跨代沟通的桥梁</li>
-            <li>珍贵的家族记忆没有持久保存</li>
+        <div class="highlight-box highlight-warn">
+          <strong>Observed gaps:</strong>
+          <ul class="feature-list" style="margin-top: 0.4rem;">
+            <li>Low engagement for younger users</li>
+            <li>No durable story archive with context</li>
+            <li>Weak intergenerational reply loop</li>
           </ul>
         </div>
       </div>
 
       <div class="card">
-        <h3>Future State (With TimeLens)</h3>
-        <div class="journey-map" style="margin-top: 1.5rem;">
+        <h3>Future Flow (With TimeLens)</h3>
+        <div class="journey-map" style="margin-top: 0.8rem;">
           <div class="journey-stages">
             <div class="journey-stage">
               <div class="stage-num">1</div>
-              <h4>发现物件</h4>
-              <p>看到带NFC标签的老物件</p>
+              <h4>Tap Keepsake</h4>
+              <p>A tagged object triggers the interaction.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">2</div>
-              <h4>扫描解锁</h4>
-              <p>用手机轻触标签，"解锁"记忆</p>
+              <h4>Unlock Memory</h4>
+              <p>NFC tap reveals a connected family story.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">3</div>
-              <h4>3D体验</h4>
-              <p>观看3D展示和故事动画</p>
+              <h4>3D Experience</h4>
+              <p>Story is shown with visual depth and emotion.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">4</div>
-              <h4>互动留言</h4>
-              <p>发送留言给长辈</p>
+              <h4>Reply Message</h4>
+              <p>Both generations exchange short messages.</p>
             </div>
             <div class="journey-stage">
               <div class="stage-num">5</div>
-              <h4>收藏回顾</h4>
-              <p>在地图中收藏和回顾</p>
+              <h4>Build Archive</h4>
+              <p>Memories remain available for future visits.</p>
             </div>
           </div>
         </div>
-        
-        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(16, 185, 129, 0.1); border-radius: 1rem;">
-          <strong style="color: #10b981;">Benefits:</strong>
-          <ul style="margin-top: 0.5rem; margin-left: 1.5rem; color: var(--text-secondary);">
-            <li>游戏化的"解锁"体验吸引孩子</li>
-            <li>3D可视化让故事更生动</li>
-            <li>双向留言促进跨代交流</li>
-            <li>家族记忆永久保存，随时回顾</li>
+        <div class="highlight-box highlight-success">
+          <strong>Expected value:</strong>
+          <ul class="feature-list" style="margin-top: 0.4rem;">
+            <li>Higher curiosity and replay value</li>
+            <li>Two-way conversation instead of one-way explanation</li>
+            <li>Persistent memory map for long-term family use</li>
           </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2024 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p>© 2026 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p style="margin-top: 0.45rem;">Questionnaire dataset: 50 samples (simulated but realistic distribution)</p>
   </footer>
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
-    <img id="lightbox-img" src="" alt="Enlarged view" onclick="event.stopPropagation()">
-  </div>
+
   <script>
-    (function() {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      function openLightbox(src) {
-        lightboxImg.src = src;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    function safeAvg(data, key) {
+      if (!data.length) return 0;
+      return data.reduce((sum, item) => sum + Number(item[key] || 0), 0) / data.length;
+    }
+
+    function pct(value, total) {
+      if (!total) return 0;
+      return (value / total) * 100;
+    }
+
+    function createProgressRows(container, rows) {
+      container.innerHTML = rows.map((row) => `
+        <div class="progress-row">
+          <div class="progress-label">
+            <span>${row.label}</span>
+            <strong>${row.value}</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: ${row.percent.toFixed(1)}%;"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateText(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    }
+
+    function roleCount(data, role) {
+      return data.filter((item) => item.role === role).length;
+    }
+
+    async function renderSurveyDashboard() {
+      try {
+        const response = await fetch('assets/data/survey-sample-50.json');
+        const data = await response.json();
+
+        const total = data.length;
+        const success = data.filter((d) => d.taskSuccess).length;
+
+        const avgNfc = safeAvg(data, 'nfcEase');
+        const avgStory = safeAvg(data, 'storyAppeal');
+        const avgReply = safeAvg(data, 'replyIntent');
+        const avgTime = safeAvg(data, 'timeToCompleteSec');
+
+        const promoters = data.filter((d) => Number(d.recommendScore) >= 9).length;
+        const passives = data.filter((d) => Number(d.recommendScore) >= 7 && Number(d.recommendScore) <= 8).length;
+        const detractors = data.filter((d) => Number(d.recommendScore) <= 6).length;
+
+        updateText('kpi-samples', `${total}`);
+        updateText('kpi-success', `${pct(success, total).toFixed(1)}%`);
+        updateText('kpi-nfc', `${avgNfc.toFixed(2)} / 5`);
+        updateText('kpi-story', `${avgStory.toFixed(2)} / 5`);
+        updateText('kpi-reply', `${avgReply.toFixed(2)} / 5`);
+        updateText('kpi-time', `${Math.round(avgTime)}s`);
+
+        const roleBars = document.getElementById('role-bars');
+        createProgressRows(roleBars, [
+          { label: 'Grandchildren', value: `${roleCount(data, 'Grandchild')} (${pct(roleCount(data, 'Grandchild'), total).toFixed(1)}%)`, percent: pct(roleCount(data, 'Grandchild'), total) },
+          { label: 'Parents', value: `${roleCount(data, 'Parent')} (${pct(roleCount(data, 'Parent'), total).toFixed(1)}%)`, percent: pct(roleCount(data, 'Parent'), total) },
+          { label: 'Grandparents', value: `${roleCount(data, 'Grandparent')} (${pct(roleCount(data, 'Grandparent'), total).toFixed(1)}%)`, percent: pct(roleCount(data, 'Grandparent'), total) }
+        ]);
+
+        const indicators = document.getElementById('indicator-bars');
+        createProgressRows(indicators, [
+          { label: 'NFC Ease', value: `${avgNfc.toFixed(2)} / 5`, percent: avgNfc / 5 * 100 },
+          { label: 'Story Appeal', value: `${avgStory.toFixed(2)} / 5`, percent: avgStory / 5 * 100 },
+          { label: 'Reply Intent', value: `${avgReply.toFixed(2)} / 5`, percent: avgReply / 5 * 100 },
+          { label: 'Task Success', value: `${pct(success, total).toFixed(1)}%`, percent: pct(success, total) }
+        ]);
+
+        const promoterPct = pct(promoters, total);
+        const passivePct = pct(passives, total);
+        const detractorPct = pct(detractors, total);
+
+        const donut = document.getElementById('recommend-donut');
+        donut.style.background = `conic-gradient(#10b981 0 ${promoterPct}%, #fbbf24 ${promoterPct}% ${promoterPct + passivePct}%, #ef4444 ${promoterPct + passivePct}% 100%)`;
+        updateText('recommend-center', `${promoterPct.toFixed(0)}%`);
+
+        const legend = document.getElementById('recommend-legend');
+        legend.innerHTML = `
+          <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Promoters (9-10): ${promoters}</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#fbbf24"></span>Passives (7-8): ${passives}</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Detractors (0-6): ${detractors}</div>
+        `;
+
+        updateText(
+          'insight-text',
+          `The prototype shows ${pct(success, total).toFixed(1)}% task success with strong cross-generation acceptance. Story appeal (${avgStory.toFixed(2)}/5) and reply intent (${avgReply.toFixed(2)}/5) indicate solid communication potential.`
+        );
+
+        const body = document.getElementById('sample-table-body');
+        body.innerHTML = data.slice(0, 10).map((item) => `
+          <tr>
+            <td>${item.id}</td>
+            <td>${item.role}</td>
+            <td>${item.ageGroup}</td>
+            <td>${item.nfcEase}</td>
+            <td>${item.storyAppeal}</td>
+            <td>${item.replyIntent}</td>
+            <td>${item.taskSuccess ? 'Yes' : 'No'}</td>
+            <td>${item.timeToCompleteSec}</td>
+            <td>${item.recommendScore}</td>
+          </tr>
+        `).join('');
+      } catch (error) {
+        updateText('insight-text', 'Unable to load the dataset file. Please verify assets/data/survey-sample-50.json.');
       }
-      function closeLightbox() {
-        lightbox.classList.remove('active');
-        lightboxImg.src = '';
-        document.body.style.overflow = '';
-      }
-      document.querySelectorAll('img:not(#lightbox-img)').forEach(img => {
-        img.addEventListener('click', function() {
-          if (this.src) openLightbox(this.src);
-        });
-      });
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeLightbox();
-      });
-      window.closeLightbox = closeLightbox;
-    })();
+    }
+
+    renderSurveyDashboard();
   </script>
 </body>
 </html>
