@@ -6,6 +6,7 @@
   <title>Research - TimeLens Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ambient-audio.js" defer></script>
 </head>
 <body>
   <nav>
@@ -43,7 +44,7 @@
             <ul class="feature-list">
               <li>Context observation of family story-sharing around keepsakes</li>
               <li>Semi-structured interviews on memory loss and communication gaps</li>
-              <li>16-participant questionnaire and prototype walkthrough</li>
+              <li>24-participant mixed-role questionnaire (Grandchild subgroup ages 18-22) and prototype walkthrough</li>
               <li>Behavioral metrics: task success, completion time, recommendation score</li>
             </ul>
           </div>
@@ -59,6 +60,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
     <section class="container">
@@ -99,7 +101,7 @@
     <section class="container">
       <div class="section-header">
         <h2>Statistical Dashboard</h2>
-        <p>16-sample questionnaire and first-use walkthrough metrics</p>
+        <p>24 fixed records across three roles; Grandchild ages are constrained to 18-22</p>
       </div>
 
       <div class="card">
@@ -262,7 +264,8 @@
 
   <footer>
     <p>© 2026 TimeLens Team - CPT208 Relation Between Generations</p>
-    <p style="margin-top: 0.45rem;">Questionnaire dataset: 16 samples (simulated but realistic distribution)</p>
+    <p style="margin-top: 0.45rem;">Questionnaire dataset: 24 fixed records; only Grandchild participants are ages 18-22</p>
+    <p style="margin-top: 0.45rem;">Photo sources: Pexels (IDs 8769740, 6972666, 34932774)</p>
   </footer>
 
   <script>
@@ -316,7 +319,7 @@
 
     async function renderSurveyDashboard() {
       try {
-        const response = await fetch('assets/data/survey-sample-16.json');
+        const response = await fetch('assets/data/survey-sample-24.json');
         const data = await response.json();
 
         const total = data.length;
@@ -403,7 +406,7 @@
         );
 
         const body = document.getElementById('sample-table-body');
-        body.innerHTML = data.slice(0, 16).map((item) => {
+        body.innerHTML = data.slice(0, 24).map((item) => {
           const parsedAge = Number(item.age);
           const age = Number.isFinite(parsedAge) && parsedAge > 0 ? parsedAge : '-';
           return `

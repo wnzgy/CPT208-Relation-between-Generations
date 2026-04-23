@@ -6,6 +6,7 @@
   <title>System - TimeLens Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ambient-audio.js" defer></script>
 </head>
 <body>
   <nav>
@@ -120,6 +121,67 @@
           <h3>Create Memory</h3>
           <img src="assets/images/screen-create.png" alt="Create memory screen" style="width: 100%; max-width: 180px; margin: 0 auto; display: block; border-radius: 1rem;">
           <p class="muted" style="margin-top: 0.6rem;">Add new keepsakes with year, story, and color tag.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="prototype-structure">
+      <div class="section-header">
+        <h2>Prototype Structure</h2>
+        <p>Clear end-to-end flow from keepsake entry to shared memory revisits</p>
+      </div>
+
+      <div class="card">
+        <div class="proto-structure-scroll">
+          <div class="proto-structure-track">
+            <article class="proto-node">
+              <div class="proto-node-step">Step 1</div>
+              <h4>Role Entry</h4>
+              <p class="muted">User opens the app and selects the storyteller identity.</p>
+              <img src="assets/images/screen-scan.png" alt="Role entry and scan start">
+            </article>
+
+            <div class="proto-link">→</div>
+
+            <article class="proto-node">
+              <div class="proto-node-step">Step 2</div>
+              <h4>Tap / Scan Trigger</h4>
+              <p class="muted">NFC-first entry, with a manual scan fallback path for unsupported devices.</p>
+              <img src="assets/images/screen-scanning.jpg" alt="Scanning transition">
+            </article>
+
+            <div class="proto-link">→</div>
+
+            <article class="proto-node">
+              <div class="proto-node-step">Step 3</div>
+              <h4>3D Memory Reveal</h4>
+              <p class="muted">A keepsake unlocks the story card and visual memory scene.</p>
+              <img src="assets/images/screen-memory.png" alt="3D memory reveal">
+            </article>
+
+            <div class="proto-link">→</div>
+
+            <article class="proto-node">
+              <div class="proto-node-step">Step 4</div>
+              <h4>Reply Loop</h4>
+              <p class="muted">Cross-generation replies keep the memory active as dialogue, not archive.</p>
+              <img src="assets/images/screen-messages.png" alt="Message loop">
+            </article>
+
+            <div class="proto-link">→</div>
+
+            <article class="proto-node">
+              <div class="proto-node-step">Step 5</div>
+              <h4>Memory Collection</h4>
+              <p class="muted">Users revisit memories through map and collection states over time.</p>
+              <img src="assets/images/screen-map.png" alt="Memory map and revisit">
+            </article>
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top: 1rem;">
+          <strong>Core Loop:</strong>
+          <p class="muted" style="margin-top: 0.35rem;">Role select -> scan keepsake -> reveal memory -> reply -> collect and revisit.</p>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,6 +6,7 @@
   <title>TimeLens - Process Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ambient-audio.js" defer></script>
 </head>
 <body>
   <nav>
@@ -29,11 +30,23 @@
   </nav>
 
   <main>
-    <section class="hero">
+    <section class="hero hero-photo">
       <div class="container">
-        <h1>TimeLens</h1>
-        <p class="subtitle">A playful intergenerational memory portal</p>
-        <p class="tagline">From keepsake to conversation</p>
+        <div class="hero-photo-frame">
+          <img src="assets/images/story/hero-family-home.jpg" alt="Grandparents and grandchild sharing a warm family moment at home">
+          <div class="hero-photo-overlay"></div>
+          <div class="hero-photo-content">
+            <p class="topic-kicker">Intergenerational Story Scene</p>
+            <h1>TimeLens</h1>
+            <p class="subtitle">A playful intergenerational memory portal</p>
+            <p class="tagline">From keepsake to conversation</p>
+            <div class="scene-meta">
+              <span class="scene-chip">Setting: Home Kitchen</span>
+              <span class="scene-chip">Object: Keepsake Pocket Watch</span>
+              <span class="scene-chip">Emotion: Warm and Curious</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -71,7 +84,7 @@
             <div class="card-kicker">Deliverables</div>
             <h3>Submission-ready package</h3>
             <div>
-              <a class="pill pill-link" href="research.html">Questionnaire + 16 samples</a>
+              <a class="pill pill-link" href="research.html">Questionnaire + 24 samples</a>
               <a class="pill pill-link" href="research.html">Data statistics dashboard</a>
               <a class="pill pill-link" href="design.html">Design process portfolio</a>
               <a class="pill pill-link" href="timeline.html">Timeline page</a>
@@ -104,13 +117,81 @@
             <div class="card-kicker">Deliverables</div>
             <h3>Submission-ready package</h3>
             <div>
-              <a class="pill pill-link" href="research.html">Questionnaire + 16 samples</a>
+              <a class="pill pill-link" href="research.html">Questionnaire + 24 samples</a>
               <a class="pill pill-link" href="research.html">Data statistics dashboard</a>
               <a class="pill pill-link" href="design.html">Design process portfolio</a>
               <a class="pill pill-link" href="timeline.html">Timeline page</a>
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-header">
+        <h2>How to Use the Prototype</h2>
+        <p>One clear walkthrough flow for demo and first-time users</p>
+      </div>
+
+      <div class="usage-flow">
+        <article class="usage-step">
+          <div class="usage-step-index">1</div>
+          <h3>Select Role</h3>
+          <p class="muted">Choose whether you enter as grandparent or grandchild.</p>
+        </article>
+        <article class="usage-step">
+          <div class="usage-step-index">2</div>
+          <h3>Tap / Scan Keepsake</h3>
+          <p class="muted">Use NFC on supported devices, or use manual scan fallback.</p>
+        </article>
+        <article class="usage-step">
+          <div class="usage-step-index">3</div>
+          <h3>Reveal Story</h3>
+          <p class="muted">Unlock the memory card and 3D visual scene.</p>
+        </article>
+        <article class="usage-step">
+          <div class="usage-step-index">4</div>
+          <h3>Send Reply</h3>
+          <p class="muted">Continue the story through short cross-generation messages.</p>
+        </article>
+        <article class="usage-step">
+          <div class="usage-step-index">5</div>
+          <h3>Collect & Revisit</h3>
+          <p class="muted">Track unlocked keepsakes in the map and return later.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-header">
+        <h2>Visual Highlights</h2>
+        <p>Key moments from the interaction journey</p>
+      </div>
+
+      <div class="visual-grid">
+        <article class="visual-card visual-card-wide">
+          <img src="assets/images/story/grandparent-grandchild.jpg" alt="Grandparent and grandchild interacting in a warm home scene">
+          <div class="visual-caption">
+            <h3>Intergenerational Bond</h3>
+            <p class="muted">Eye contact and close body language support trust before digital interaction starts.</p>
+          </div>
+        </article>
+
+        <article class="visual-card">
+          <img src="assets/images/story/keepsake-pocket-watch.jpg" alt="Close-up of a pocket watch keepsake held in hands">
+          <div class="visual-caption">
+            <h3>Keepsake Anchor</h3>
+            <p class="muted">The pocket watch acts as the physical trigger for memory reveal and storytelling.</p>
+          </div>
+        </article>
+
+        <article class="visual-card">
+          <img src="assets/images/story/hero-family-home.jpg" alt="Family members smiling during shared activity">
+          <div class="visual-caption">
+            <h3>Shared Activity</h3>
+            <p class="muted">Warm domestic activities create the right emotional context for preserving family stories.</p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -123,6 +204,14 @@
       <div class="card" style="text-align: center;">
         <h3>Try the Live Prototype</h3>
         <p class="muted" style="margin-bottom: 1rem;">This is the same Vite/React prototype as the local server version, built as static files for one-click review.</p>
+
+        <div class="prototype-watch-row">
+          <img src="assets/images/story/keepsake-pocket-watch.jpg" alt="Pocket watch keepsake used for prototype trigger demonstration">
+          <div class="prototype-watch-text">
+            <h4>Pocket Watch Demonstration Scene</h4>
+            <p class="muted">For live demo, we use the grandfather pocket watch as the tangible trigger before memory reveal and reply flow.</p>
+          </div>
+        </div>
 
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem;">
           <a class="btn" href="https://wnzgy.github.io/CPT208-Relation-between-Generations/prototype/" target="_blank" rel="noopener noreferrer">Open Prototype</a>
@@ -138,7 +227,10 @@
       </div>
 
       <div class="team-grid">
-        <div class="card">
+        <div class="card team-card">
+          <div class="team-media">
+            <img src="assets/images/team/member-a.jpg" alt="Avatar of Chenlong Wei">
+          </div>
           <h3>Member A - Chenlong Wei</h3>
           <div class="member-id">Student ID: 2363235</div>
           <ul class="feature-list">
@@ -148,7 +240,10 @@
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card team-card">
+          <div class="team-media">
+            <img src="assets/images/team/member-b.jpg" alt="Avatar of Zixuan Wang">
+          </div>
           <h3>Member B - Zixuan Wang</h3>
           <div class="member-id">Student ID: 2363717</div>
           <ul class="feature-list">
@@ -158,7 +253,10 @@
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card team-card">
+          <div class="team-media">
+            <img src="assets/images/team/member-c.jpg" alt="Avatar of Puwei Fan">
+          </div>
           <h3>Member C - Puwei Fan</h3>
           <div class="member-id">Student ID: 2362997</div>
           <ul class="feature-list">
@@ -168,7 +266,10 @@
           </ul>
         </div>
 
-        <div class="card">
+        <div class="card team-card">
+          <div class="team-media">
+            <img src="assets/images/team/member-d.jpg" alt="Avatar of Wenhe Li">
+          </div>
           <h3>Member D - Wenhe Li</h3>
           <div class="member-id">Student ID: 2364596</div>
           <ul class="feature-list">
@@ -188,7 +289,7 @@
       <div class="quick-links">
         <a href="research.html" class="quick-link-card">
           <h3>Research & Survey</h3>
-          <p class="muted">Questionnaire design, 16-sample dataset, and statistical insights.</p>
+          <p class="muted">Questionnaire design, 24-sample dataset, and statistical insights.</p>
         </a>
 
         <a href="design.html" class="quick-link-card">
@@ -212,6 +313,7 @@
   <footer>
     <p>© 2026 TimeLens Team - CPT208 Relation Between Generations</p>
     <p style="margin-top: 0.45rem;">Group B4-1 | Portfolio in English for submission consistency</p>
+    <p style="margin-top: 0.45rem;">Photo sources: Pexels (IDs 8769740, 6972666, 34932774)</p>
   </footer>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <title>Project Timeline - TimeLens Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ambient-audio.js" defer></script>
 </head>
 <body>
   <nav>
@@ -105,11 +106,90 @@
 
         <p class="timeline-caption">Semester timeline with key milestones and final submission points.</p>
       </div>
+
+      <div class="card">
+        <h3>Embedded Planning Board</h3>
+        <p class="muted">A zoom-friendly planning view for presentation: switch the board, click to inspect details, and open full-screen when needed.</p>
+
+        <div class="plan-toolbar">
+          <button class="plan-tab active" data-plan-target="plan-flow" type="button">User Flow Plan</button>
+          <button class="plan-tab" data-plan-target="plan-architecture" type="button">System Plan</button>
+          <a id="plan-full-link" class="btn btn-secondary" href="assets/diagrams/user-flow.jpg" target="_blank" rel="noopener noreferrer">Open Full Size</a>
+        </div>
+
+        <div class="plan-embed active" id="plan-flow">
+          <img src="assets/diagrams/user-flow.jpg" alt="User flow planning board">
+        </div>
+
+        <div class="plan-embed" id="plan-architecture">
+          <img src="assets/diagrams/system-architecture.svg" alt="System architecture board">
+        </div>
+
+        <p class="timeline-caption">Use this as the in-slide embedded plan window during live explanation.</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>© 2026 TimeLens Team - CPT208 Relation Between Generations</p>
   </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</div>
+    <img id="lightbox-img" src="" alt="Enlarged planning board" onclick="event.stopPropagation()">
+  </div>
+  <script>
+    (function() {
+      const tabs = document.querySelectorAll('.plan-tab');
+      const panes = document.querySelectorAll('.plan-embed');
+      const fullLink = document.getElementById('plan-full-link');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.planTarget;
+
+          tabs.forEach((item) => item.classList.remove('active'));
+          panes.forEach((pane) => pane.classList.remove('active'));
+
+          tab.classList.add('active');
+          const pane = document.getElementById(target);
+          if (pane) {
+            pane.classList.add('active');
+            const img = pane.querySelector('img');
+            if (img) fullLink.href = img.src;
+          }
+        });
+      });
+
+      function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+      }
+
+      panes.forEach((pane) => {
+        const img = pane.querySelector('img');
+        if (img) {
+          img.addEventListener('click', function() {
+            openLightbox(this.src);
+          });
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeLightbox();
+      });
+
+      window.closeLightbox = closeLightbox;
+    })();
+  </script>
 </body>
 </html>
