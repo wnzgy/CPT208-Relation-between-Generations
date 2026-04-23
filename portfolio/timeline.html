@@ -108,24 +108,18 @@
       </div>
 
       <div class="card">
-        <h3>Embedded Planning Board</h3>
-        <p class="muted">A zoom-friendly planning view for presentation: switch the board, click to inspect details, and open full-screen when needed.</p>
+        <h3>Structured Work Plan Board</h3>
+        <p class="muted">Line-and-frame planning board for presentation: each box is a deliverable block and each arrow is a dependency path.</p>
 
         <div class="plan-toolbar">
-          <button class="plan-tab active" data-plan-target="plan-flow" type="button">User Flow Plan</button>
-          <button class="plan-tab" data-plan-target="plan-architecture" type="button">System Plan</button>
-          <a id="plan-full-link" class="btn btn-secondary" href="assets/diagrams/user-flow.jpg" target="_blank" rel="noopener noreferrer">Open Full Size</a>
+          <a id="plan-full-link" class="btn btn-secondary" href="assets/diagrams/work-plan-flow.svg" target="_blank" rel="noopener noreferrer">Open Full Size</a>
         </div>
 
         <div class="plan-embed active" id="plan-flow">
-          <img src="assets/diagrams/user-flow.jpg" alt="User flow planning board">
+          <img src="assets/diagrams/work-plan-flow.svg" alt="TimeLens work plan and process flow board">
         </div>
 
-        <div class="plan-embed" id="plan-architecture">
-          <img src="assets/diagrams/system-architecture.svg" alt="System architecture board">
-        </div>
-
-        <p class="timeline-caption">Use this as the in-slide embedded plan window during live explanation.</p>
+        <p class="timeline-caption">Custom board created for this project: planning, build, validation, milestone, and submission flow in one map.</p>
       </div>
     </section>
   </main>
@@ -140,28 +134,9 @@
   </div>
   <script>
     (function() {
-      const tabs = document.querySelectorAll('.plan-tab');
-      const panes = document.querySelectorAll('.plan-embed');
-      const fullLink = document.getElementById('plan-full-link');
       const lightbox = document.getElementById('lightbox');
       const lightboxImg = document.getElementById('lightbox-img');
-
-      tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const target = tab.dataset.planTarget;
-
-          tabs.forEach((item) => item.classList.remove('active'));
-          panes.forEach((pane) => pane.classList.remove('active'));
-
-          tab.classList.add('active');
-          const pane = document.getElementById(target);
-          if (pane) {
-            pane.classList.add('active');
-            const img = pane.querySelector('img');
-            if (img) fullLink.href = img.src;
-          }
-        });
-      });
+      const boardImage = document.querySelector('.plan-embed img');
 
       function openLightbox(src) {
         lightboxImg.src = src;
@@ -175,14 +150,11 @@
         document.body.style.overflow = '';
       }
 
-      panes.forEach((pane) => {
-        const img = pane.querySelector('img');
-        if (img) {
-          img.addEventListener('click', function() {
-            openLightbox(this.src);
-          });
-        }
-      });
+      if (boardImage) {
+        boardImage.addEventListener('click', function() {
+          openLightbox(this.src);
+        });
+      }
 
       document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') closeLightbox();

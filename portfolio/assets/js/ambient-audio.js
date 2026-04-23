@@ -1,6 +1,7 @@
 (function () {
   var AudioCtxCtor = window.AudioContext || window.webkitAudioContext;
   var storageKey = 'timelens-audio-v3';
+  var playbackKey = 'timelens-audio-playback-v1';
   var defaults = {
     enabled: true,
     bgm: true,
@@ -23,6 +24,27 @@
   var sfxCtx = null;
   var bgm = null;
   var resumeAfterHidden = false;
+  var lastSavedSecond = -1;
+  var pendingResumeTime = 0;
+
+  function readPlayback() {
+    try {
+      return JSON.parse(localStorage.getItem(playbackKey) || 'null');
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writePlayback(payload) {
+    localStorage.setItem(playbackKey, JSON.stringify(payload));
+  }
+
+  (function restorePlaybackTime() {
+    var savedPlayback = readPlayback();
+    if (!savedPlayback) return;
+    if (!Number.isFinite(savedPlayback.time)) return;
+    pendingResumeTime = Math.max(0, Number(savedPlayback.time));
+  })();
 
   var scriptBase = (function () {
     var script = document.currentScript;
@@ -40,6 +62,15 @@
 
   function saveState() {
     localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+  function rememberPlayback(isPlaying) {
+    if (!bgm) return;
+    writePlayback({
+      time: Number.isFinite(bgm.currentTime) ? Number(bgm.currentTime) : 0,
+      isPlaying: !!isPlaying,
+      updatedAt: Date.now()
+    });
   }
 
   function ensureSfxCtx() {
@@ -73,6 +104,34 @@
     bgm.preload = 'auto';
     bgm.volume = state.volume;
     bgm.setAttribute('aria-hidden', 'true');
+
+    function applyResumeTime() {
+      if (!Number.isFinite(pendingResumeTime) || pendingResumeTime <= 0) return;
+      try {
+        var duration = Number(bgm.duration);
+        var seekTime = pendingResumeTime;
+        if (Number.isFinite(duration) && duration > 0) {
+          seekTime = seekTime % duration;
+        }
+        bgm.currentTime = seekTime;
+      } catch (_) {
+        return;
+      }
+      pendingResumeTime = 0;
+    }
+
+    bgm.addEventListener('loadedmetadata', applyResumeTime);
+    if (bgm.readyState >= 1) applyResumeTime();
+
+    bgm.addEventListener('timeupdate', function () {
+      if (bgm.paused) return;
+      var second = Math.floor(bgm.currentTime || 0);
+      if (second !== lastSavedSecond) {
+        lastSavedSecond = second;
+        rememberPlayback(true);
+      }
+    });
+
     return bgm;
   }
 
@@ -80,19 +139,24 @@
     if (!state.enabled || !state.bgm) return;
     var player = ensureBgm();
     player.volume = state.volume;
-    player.play().catch(function () {
-      // Browser autoplay restrictions are expected before user gesture.
-    });
+    player.play()
+      .then(function () {
+        rememberPlayback(true);
+      })
+      .catch(function () {
+        // Browser autoplay restrictions are expected before user gesture.
+      });
   }
 
-  function stopBgm() {
+  function stopBgm(keepPlayingIntent) {
     if (!bgm) return;
+    rememberPlayback(!!keepPlayingIntent);
     bgm.pause();
   }
 
   function refreshAudio() {
     if (!state.enabled || !state.bgm) {
-      stopBgm();
+      stopBgm(false);
       return;
     }
     startBgm();
@@ -165,6 +229,7 @@
 
     enabledInput.addEventListener('change', function () {
       state.enabled = enabledInput.checked;
+      if (!state.enabled) rememberPlayback(false);
       saveState();
       refreshAudio();
       render();
@@ -172,6 +237,7 @@
 
     bgmInput.addEventListener('change', function () {
       state.bgm = bgmInput.checked;
+      if (!state.bgm) rememberPlayback(false);
       saveState();
       refreshAudio();
       render();
@@ -197,6 +263,7 @@
     });
 
     render();
+    refreshAudio();
   }
 
   function lazyBoot() {
@@ -212,11 +279,19 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
       resumeAfterHidden = !!(bgm && !bgm.paused);
-      stopBgm();
+      stopBgm(resumeAfterHidden);
       return;
     }
     if (resumeAfterHidden) refreshAudio();
     resumeAfterHidden = false;
+  });
+
+  window.addEventListener('pagehide', function () {
+    if (bgm) rememberPlayback(!bgm.paused);
+  });
+
+  window.addEventListener('beforeunload', function () {
+    if (bgm) rememberPlayback(!bgm.paused);
   });
 
   document.addEventListener(

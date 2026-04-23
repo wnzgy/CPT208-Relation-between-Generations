@@ -966,7 +966,10 @@ main {
   display: none;
   border-radius: 0.95rem;
   border: 1px solid var(--border);
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
   background: var(--bg-soft);
 }
 
@@ -1401,6 +1404,11 @@ footer a {
 
   .visual-card-wide img {
     min-height: 280px;
+  }
+
+  .plan-embed img {
+    width: 1280px;
+    max-width: none;
   }
 }
 

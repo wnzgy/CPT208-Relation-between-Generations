@@ -1,0 +1,159 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 980" role="img" aria-labelledby="title desc">
+  <title id="title">TimeLens Work Plan and Process Flow</title>
+  <desc id="desc">Line-and-frame project workflow from kickoff to final submission.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef3ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5b6b92"/>
+    </marker>
+    <style>
+      .title { font: 700 44px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .subtitle { font: 500 22px 'Segoe UI', Arial, sans-serif; fill: #4c5f87; }
+      .lane-label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .node-title { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #1f2a44; }
+      .node-body { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #4c5f87; }
+      .week { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #52618d; }
+      .legend { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #32405f; }
+      .line { fill: none; stroke: #5b6b92; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow); }
+      .line-soft { fill: none; stroke: #8a98be; stroke-width: 3; stroke-dasharray: 8 8; marker-end: url(#arrow); }
+      .milestone { font: 700 14px 'Segoe UI', Arial, sans-serif; fill: #6d4d0f; }
+      .tag { font: 700 12px 'Segoe UI', Arial, sans-serif; fill: #6a4ee7; letter-spacing: 0.04em; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1800" height="980" fill="url(#bg)"/>
+
+  <text x="80" y="82" class="title">TimeLens Work Plan and Delivery Flow</text>
+  <text x="80" y="120" class="subtitle">CPT208 Group B4-1 · Structured roadmap with milestones, iteration loops, and final outputs</text>
+
+  <rect x="70" y="155" width="1660" height="220" rx="24" fill="#eef4ff" stroke="#c7d4f5" stroke-width="2"/>
+  <rect x="70" y="400" width="1660" height="220" rx="24" fill="#edf9f4" stroke="#bfe7d3" stroke-width="2"/>
+  <rect x="70" y="645" width="1660" height="220" rx="24" fill="#fff5e9" stroke="#f3d8b1" stroke-width="2"/>
+
+  <text x="98" y="195" class="lane-label">Research and Design Lane</text>
+  <text x="98" y="440" class="lane-label">Build and Validation Lane</text>
+  <text x="98" y="685" class="lane-label">Presentation and Submission Lane</text>
+
+  <rect x="160" y="220" width="250" height="120" rx="16" fill="#ffffff" stroke="#9eb2e8" stroke-width="3"/>
+  <text x="184" y="247" class="week">W1</text>
+  <text x="184" y="274" class="node-title">Kickoff and Scope</text>
+  <text x="184" y="298" class="node-body">Align topic with rubric</text>
+  <text x="184" y="320" class="node-body">Define target generations</text>
+
+  <rect x="460" y="220" width="250" height="120" rx="16" fill="#ffffff" stroke="#9eb2e8" stroke-width="3"/>
+  <text x="484" y="247" class="week">W2</text>
+  <text x="484" y="274" class="node-title">Interviews and Survey</text>
+  <text x="484" y="298" class="node-body">Collect needs and pain points</text>
+  <text x="484" y="320" class="node-body">Draft questionnaire items</text>
+
+  <rect x="760" y="220" width="250" height="120" rx="16" fill="#ffffff" stroke="#9eb2e8" stroke-width="3"/>
+  <text x="784" y="247" class="week">W3</text>
+  <text x="784" y="274" class="node-title">Personas and Journey</text>
+  <text x="784" y="298" class="node-body">Map cross-role workflow</text>
+  <text x="784" y="320" class="node-body">Set success criteria</text>
+
+  <rect x="1060" y="220" width="250" height="120" rx="16" fill="#ffffff" stroke="#9eb2e8" stroke-width="3"/>
+  <text x="1084" y="247" class="week">W4</text>
+  <text x="1084" y="274" class="node-title">Lo-fi Alternatives</text>
+  <text x="1084" y="298" class="node-body">Compare interaction options</text>
+  <text x="1084" y="320" class="node-body">Choose final direction</text>
+
+  <rect x="1360" y="220" width="250" height="120" rx="16" fill="#ffffff" stroke="#9eb2e8" stroke-width="3"/>
+  <text x="1384" y="247" class="week">W5</text>
+  <text x="1384" y="274" class="node-title">Interaction Blueprint</text>
+  <text x="1384" y="298" class="node-body">Specify prototype flow</text>
+  <text x="1384" y="320" class="node-body">Lock feature boundaries</text>
+
+  <rect x="300" y="465" width="250" height="120" rx="16" fill="#ffffff" stroke="#79c6a1" stroke-width="3"/>
+  <text x="324" y="492" class="week">W6</text>
+  <text x="324" y="519" class="node-title">Hi-fi Build Sprint</text>
+  <text x="324" y="543" class="node-body">Build role, scan, unlock</text>
+  <text x="324" y="565" class="node-body">Prepare demo environment</text>
+
+  <rect x="600" y="465" width="250" height="120" rx="16" fill="#ffffff" stroke="#79c6a1" stroke-width="3"/>
+  <text x="624" y="492" class="week">W7</text>
+  <text x="624" y="519" class="node-title">Usability Test</text>
+  <text x="624" y="543" class="node-body">Observe task completion</text>
+  <text x="624" y="565" class="node-body">Collect feedback notes</text>
+
+  <rect x="900" y="465" width="250" height="120" rx="16" fill="#ffffff" stroke="#79c6a1" stroke-width="3"/>
+  <text x="924" y="492" class="week">W8</text>
+  <text x="924" y="519" class="node-title">Iteration and Data</text>
+  <text x="924" y="543" class="node-body">Refine UX and copy</text>
+  <text x="924" y="565" class="node-body">Analyze survey samples</text>
+
+  <rect x="1200" y="465" width="250" height="120" rx="16" fill="#ffffff" stroke="#79c6a1" stroke-width="3"/>
+  <text x="1224" y="492" class="week">W8</text>
+  <text x="1224" y="519" class="node-title">Demo Rehearsal</text>
+  <text x="1224" y="543" class="node-body">Run full walkthrough</text>
+  <text x="1224" y="565" class="node-body">Check failure fallback</text>
+
+  <rect x="1500" y="465" width="250" height="120" rx="16" fill="#ffffff" stroke="#79c6a1" stroke-width="3"/>
+  <text x="1524" y="492" class="week">W8</text>
+  <text x="1524" y="519" class="node-title">Demo Milestone</text>
+  <text x="1524" y="543" class="node-body">In-class checkpoint</text>
+  <text x="1524" y="565" class="node-body">Stakeholder review</text>
+
+  <rect x="580" y="710" width="280" height="120" rx="16" fill="#ffffff" stroke="#e4b06a" stroke-width="3"/>
+  <text x="604" y="737" class="week">W9</text>
+  <text x="604" y="764" class="node-title">Poster and Storyboard</text>
+  <text x="604" y="788" class="node-body">Narrative and visuals</text>
+  <text x="604" y="810" class="node-body">Define presentation script</text>
+
+  <rect x="940" y="710" width="280" height="120" rx="16" fill="#ffffff" stroke="#e4b06a" stroke-width="3"/>
+  <text x="964" y="737" class="week">W10</text>
+  <text x="964" y="764" class="node-title">Portfolio Finalization</text>
+  <text x="964" y="788" class="node-body">Deploy GitHub Pages build</text>
+  <text x="964" y="810" class="node-body">Verify links and evidence</text>
+
+  <rect x="1300" y="710" width="280" height="120" rx="16" fill="#ffffff" stroke="#e4b06a" stroke-width="3"/>
+  <text x="1324" y="737" class="week">W10</text>
+  <text x="1324" y="764" class="node-title">Final Delivery</text>
+  <text x="1324" y="788" class="node-body">Poster + system + video</text>
+  <text x="1324" y="810" class="node-body">Live presentation</text>
+
+  <path class="line" d="M410 280 L460 280"/>
+  <path class="line" d="M710 280 L760 280"/>
+  <path class="line" d="M1010 280 L1060 280"/>
+  <path class="line" d="M1310 280 L1360 280"/>
+
+  <path class="line" d="M885 340 L885 455 L550 455 L550 525"/>
+  <path class="line" d="M1185 340 L1185 455 L850 455 L850 525"/>
+
+  <path class="line" d="M550 525 L600 525"/>
+  <path class="line" d="M850 525 L900 525"/>
+  <path class="line" d="M1150 525 L1200 525"/>
+  <path class="line" d="M1450 525 L1500 525"/>
+
+  <path class="line" d="M1025 585 L1025 710"/>
+  <path class="line" d="M1725 585 L1725 870 L1580 870 L1580 770"/>
+
+  <path class="line" d="M860 770 L940 770"/>
+  <path class="line" d="M1220 770 L1300 770"/>
+
+  <path class="line-soft" d="M1325 585 L1325 670 L1080 670 L1080 710"/>
+  <path class="line-soft" d="M740 465 L740 430 L430 430 L430 465"/>
+
+  <polygon points="1615,640 1635,660 1615,680 1595,660" fill="#ffd89a" stroke="#d49b43" stroke-width="2"/>
+  <text x="1650" y="666" class="milestone">Demo checkpoint</text>
+
+  <polygon points="1605,880 1625,900 1605,920 1585,900" fill="#ffd89a" stroke="#d49b43" stroke-width="2"/>
+  <text x="1640" y="906" class="milestone">Final submission</text>
+
+  <rect x="70" y="894" width="400" height="54" rx="12" fill="#ffffff" stroke="#c7d4f5" stroke-width="2"/>
+  <text x="94" y="927" class="legend">Blue lane: discovery and design decisions</text>
+
+  <rect x="495" y="894" width="390" height="54" rx="12" fill="#ffffff" stroke="#bfe7d3" stroke-width="2"/>
+  <text x="519" y="927" class="legend">Green lane: implementation and validation</text>
+
+  <rect x="905" y="894" width="390" height="54" rx="12" fill="#ffffff" stroke="#f3d8b1" stroke-width="2"/>
+  <text x="929" y="927" class="legend">Orange lane: presentation and delivery</text>
+
+  <rect x="1315" y="894" width="415" height="54" rx="12" fill="#ffffff" stroke="#c7d4f5" stroke-width="2"/>
+  <text x="1339" y="927" class="legend">Dashed arrows: feedback loop and risk mitigation</text>
+
+  <text x="168" y="173" class="tag">PLANNING BOARD</text>
+</svg>
