@@ -1,133 +1,91 @@
-﻿# TimeLens Portfolio
+# TimeLens Portfolio
 
-Process Portfolio for CPT208 - Relation Between Generations
+Process Portfolio for CPT208 - Relation Between Generations (Group B4-1)
 
-## 🌐 Live Demo
+## 🌐 Live Portfolio
 
-Visit the portfolio: `https://wnzgy.github.io/CPT208-Relation-between-Generations/portfolio/`
+Visit: `https://wnzgy.github.io/CPT208-Relation-between-Generations/portfolio/`
 
 ## 📁 Structure
 
 ```
 portfolio/
-├── index.html          # Home page - Project overview
-├── research.html       # User research - Personas & Journey Map
-├── design.html         # Design process - Crazy 8s & Alternatives
-├── system.html         # System - Screenshots & Demo video
+├── index.html          # Home - Project overview, team, prototype links
+├── research.html       # Research - Personas, Journey Map, Survey Dashboard, Evidence of Life
+├── design.html         # Design - Crazy 8s, Alternatives, Low-Fi Wireframes
+├── system.html         # System - Architecture, Screenshots, Individual Contributions
+├── evaluation.html     # Evaluation - Usability Testing, Iterative Refinement, Final Reflection
+├── timeline.html       # Timeline - Full semester workflow and W8-W10 execution plan
 ├── assets/
-│   ├── css/
-│   │   └── style.css   # All styles
-│   ├── images/         # Screenshots & photos
-│   └── crazy8s/        # Crazy 8s sketches
+│   ├── css/style.css   # All styles (dark/light theme, responsive)
+│   ├── images/         # Screenshots, story photos, team avatars
+│   ├── crazy8s/        # Crazy 8s sketches
+│   ├── diagrams/       # System architecture, user flow, work plan
+│   ├── data/           # survey-sample-24.json
+│   └── js/             # Theme toggle, ambient audio
 └── README.md           # This file
 ```
 
-## 📝 How to Update
+## 📝 Content Checklist (Week 10 Ready)
 
-### 1. Crazy 8s Sketches ✅ Done
+### Portfolio Pages
+- [x] **index.html** - Project overview, team info, prototype entry
+- [x] **research.html** - Stakeholders, Personas (2), Journey Map, Evidence of Life placeholders, Survey Dashboard (24 samples), 5 academic papers
+- [x] **design.html** - Design principles, Crazy 8s (8 sketches), Design Alternatives comparison, Low-Fi wireframes, User Flow
+- [x] **system.html** - System Architecture, Prototype Screens (6), Prototype Structure, Implementation Highlights, Individual Contributions table, AI Disclosure
+- [x] **evaluation.html** - Usability Testing (3-person Alpha), Iterative Refinement (3 Before/After iterations), Final Reflection (Social/Ethical + AI Usage), References
+- [x] **timeline.html** - Semester timeline flowchart, W8-W10 execution plan, milestone markers
 
-8 hand-drawn style sketches have been generated and saved to `assets/crazy8s/crazy8s-1.jpg` through `crazy8s-8.jpg`.
-
-To regenerate or modify styles, run:
-```bash
-python3 generate_crazy8s.py
-```
-
-### 2. Low-Fi Prototypes ✅ Done
-
-Mobile wireframe and user interaction flow diagrams have been generated and linked in `design.html`.
-
-To regenerate, run:
-```bash
-python3 generate_lowfi.py
-```
-
-### 3. Add App Screenshots
-
-1. Take screenshots of the TimeLens app (or ask Member A for them)
-2. Save to `assets/images/`
-3. In `system.html`, replace `.svg` placeholders with real images:
-   ```html
-   <img src="assets/images/screenshot-scan.png" alt="NFC Scan Interface">
-   ```
-
-### 4. Add Demo Video
-
-**Option A: YouTube Embed**
-```html
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/VIDEO_ID" 
-  frameborder="0" allowfullscreen></iframe>
-```
-
-**Option B: Direct MP4**
-```html
-<video controls width="100%">
-  <source src="assets/video/demo.mp4" type="video/mp4">
-</video>
-```
-
-### 5. Update Content
-
-All content is in the HTML files. Edit directly:
-- `research.html` - Update Persona details if needed
-- `design.html` - Design rationale is already filled
-- `system.html` - Add technical details and real screenshots
-
-## 🎨 Customization
-
-### Colors
-Edit `assets/css/style.css`:
-```css
-:root {
-  --primary: #4f46e5;      /* Main brand color */
-  --accent: #fbbf24;       /* Highlight color */
-  --bg-dark: #0f172a;      /* Background */
-  /* ... */
-}
-```
-
-### Fonts
-Currently using system fonts. To change, add to CSS:
-```css
-@import url('https://fonts.googleapis.com/css2?family=Your+Font&display=swap');
-
-body {
-  font-family: 'Your Font', sans-serif;
-}
-```
+### Evidence of Life (Real Photos Required)
+- [ ] **TODO:** Replace 6 placeholder images in `research.html` "Evidence of Life" section with real photos/clips of team interviewing users or observing site
+- [ ] Recommended shots: (1) Grandparent interview, (2) Home observation, (3) Grandchild interview, (4) Prototype walkthrough, (5) Survey distribution, (6) NFC tag demo setup
 
 ## 🚀 Deployment
 
-The portfolio is automatically deployed via GitHub Pages when pushed to the repository.
+The portfolio is automatically deployed via GitHub Pages when pushed to the main branch.
 
 ```bash
 # Add files
 git add portfolio/
 
 # Commit
-git commit -m "docs: Add portfolio website"
+git commit -m "docs: Finalize portfolio for Week 10 submission"
 
-# Push to your branch
-git push origin memberC-portfolio
-
-# Merge to main when ready
-git checkout main
-git merge memberC-portfolio
-git push upstream main
+# Push
+git push origin main
 ```
 
-## ✅ Checklist
+## ✅ Final Submission Checklist (Week 10)
 
-- [x] Crazy 8s sketches uploaded (AI-generated hand-drawn style)
-- [x] Low-Fi prototypes generated (mobile wireframe + user flow)
-- [x] Persona details finalized
-- [x] Design alternatives rationale complete
-- [ ] App screenshots added (pending Member A)
-- [ ] Demo video embedded or linked (pending Member D)
-- [ ] All links working
-- [ ] Mobile responsive tested
+Per CPT208 Coursework PDF requirements:
 
-## 📞 Questions?
+### Deliverables
+- [x] Live URL for Web App (prototype hosted on GitHub Pages)
+- [x] 2-minute Video Demo (MP4, 1080p, H.264) — produced by Member D
+- [x] Final Portfolio (this site) — maintained by Member C
 
-Contact the team or check the main repository:
-https://github.com/wnzgy/CPT208-Relation-between-Generations
+### Portfolio Content (PDF p.7)
+- [x] Motivation & Research (200-word statement, 4 papers + 4 products)
+- [x] Personas (2 distinct primary users)
+- [x] User Journey Map (5 stages with pain points and solutions)
+- [x] Evidence of Life (6 placeholder positions, pending real photos)
+- [x] 3 Must-Have Playful Features listed
+- [x] Crazy 8s (8 rapid sketches)
+- [x] Design Alternatives (2-3 options compared)
+- [x] Low-Fi Prototype (Figma link referenced)
+- [x] System Architecture diagram
+- [x] High-Fi Prototype URL
+- [x] Individual Contributions table (4 members)
+- [x] Usability Testing (3 real people, Alpha version)
+- [x] Iterative Refinement (Before/After with evidence)
+- [x] Final Reflection (social/ethical implications + AI usage)
+
+### AI & Academic Integrity
+- [x] AI-generated images acknowledged with captions
+- [x] AI tools cited in References (PDF p.2 format)
+- [x] Technical Reflection section explaining prompts, verification, and ethical considerations
+- [x] `/timelens/ai-logs/` folder exists with session logs
+
+## 📞 Repository
+
+Main repo: https://github.com/wnzgy/CPT208-Relation-between-Generations

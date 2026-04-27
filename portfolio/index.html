@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
   <script src="assets/js/ambient-audio.js" defer></script>
+  <script src="assets/js/scroll-animations.js" defer></script>
 </head>
 <body>
   <nav>
@@ -18,6 +19,7 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="design.html">Design</a></li>
           <li><a href="system.html">System</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
           <li><a href="timeline.html">Timeline</a></li>
           <li><a href="#prototype">Prototype</a></li>
         </ul>
@@ -30,29 +32,32 @@
   </nav>
 
   <main>
-    <section class="hero hero-photo">
+    <section class="hero hero-photo reveal">
       <div class="container">
-        <div class="hero-photo-frame">
+        <div class="hero-text">
+          <h1 class="reveal">TimeLens</h1>
+          <p class="subtitle reveal">A playful intergenerational memory portal</p>
+          <p class="tagline reveal">From keepsake to conversation</p>
+        </div>
+        <div class="hero-photo-frame reveal">
           <img src="assets/images/story/hero-family-home.jpg" alt="Grandparents and grandchild sharing a warm family moment at home">
           <div class="hero-photo-overlay"></div>
           <div class="hero-photo-content">
             <p class="topic-kicker">Intergenerational Story Scene</p>
-            <h1>TimeLens</h1>
-            <p class="subtitle">A playful intergenerational memory portal</p>
-            <p class="tagline">From keepsake to conversation</p>
+            <p class="subtitle">Experience the magic of shared stories.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="container">
+    <section class="container reveal">
       <div class="section-header">
         <h2>Project Overview</h2>
         <p>CPT208 - Relation Between Generations | Group B4-1</p>
       </div>
 
       <div class="overview-slider" aria-label="Project overview highlights">
-        <div class="overview-track">
+        <div class="overview-track stagger-children">
           <article class="overview-card">
             <div class="card-kicker">Problem</div>
             <h3>Stories fade after one conversation</h3>
@@ -122,12 +127,12 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container reveal">
       <div class="section-header">
         <h2>How to Use the Prototype</h2>
       </div>
 
-      <div class="usage-flow">
+      <div class="usage-flow stagger-children">
         <article class="usage-step">
           <div class="usage-step-index">1</div>
           <h3>Select Role</h3>
@@ -156,13 +161,13 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container reveal">
       <div class="section-header">
         <h2>Visual Highlights</h2>
         <p>Key moments from the interaction journey</p>
       </div>
 
-      <div class="visual-grid">
+      <div class="visual-grid stagger-children">
         <article class="visual-card visual-card-wide">
           <img src="assets/images/story/grandparent-grandchild.jpg" alt="Grandparent and grandchild interacting in a warm home scene">
           <div class="visual-caption">
@@ -189,7 +194,7 @@
       </div>
     </section>
 
-    <section class="container" id="prototype">
+    <section class="container reveal" id="prototype">
       <div class="section-header">
         <h2>Prototype</h2>
         <p>Open the interactive product prototype directly from GitHub Pages</p>
@@ -212,13 +217,13 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container reveal">
       <div class="section-header">
         <h2>Team Members</h2>
         <p>Official names, IDs, and responsibilities</p>
       </div>
 
-      <div class="team-grid">
+      <div class="team-grid stagger-children">
         <div class="card team-card">
           <div class="team-media">
             <img src="assets/images/team/member-a.jpg" alt="Avatar of Chenlong Wei">
@@ -273,12 +278,12 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container reveal">
       <div class="section-header">
         <h2>Explore the Portfolio</h2>
       </div>
 
-      <div class="quick-links">
+      <div class="quick-links stagger-children">
         <a href="research.html" class="quick-link-card">
           <h3>Research & Survey</h3>
           <p class="muted">Questionnaire design, 24-sample dataset, and statistical insights.</p>

@@ -18,6 +18,7 @@
           <li><a href="research.html" class="active">Research</a></li>
           <li><a href="design.html">Design</a></li>
           <li><a href="system.html">System</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
           <li><a href="timeline.html">Timeline</a></li>
           <li><a href="index.html#prototype">Prototype</a></li>
         </ul>
@@ -94,6 +95,185 @@
             </p>
             <p style="margin-top:0.6rem;"><span class="mini-kpi" id="st-success">--</span> task success</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personas -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Personas</h2>
+        <p>Primary users defined from survey data and contextual observation</p>
+      </div>
+
+      <div class="card">
+        <div class="persona-card">
+          <div class="persona-avatar">👴</div>
+          <div>
+            <h3>Grandparent — Lin Wei</h3>
+            <div class="persona-meta">Age 68 &middot; Retired Engineer &middot; Digital Confidence: Low-Medium</div>
+            <div class="persona-details">
+              <div>
+                <span class="label">Goals</span>
+                <p class="muted">Preserve family stories attached to physical keepsakes; share memories with grandchildren in an engaging format.</p>
+              </div>
+              <div>
+                <span class="label">Pain Points</span>
+                <p class="muted">Existing tools feel archival and text-heavy; unsure how to start digital storytelling; small touch targets are hard to use.</p>
+              </div>
+              <div>
+                <span class="label">Motivation Quote</span>
+                <p class="muted"><em>"I want my grandson to know why this watch matters, not just see a photo of it."</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="persona-card">
+          <div class="persona-avatar">👧</div>
+          <div>
+            <h3>Grandchild — Xiao Yu</h3>
+            <div class="persona-meta">Age 19 &middot; University Student &middot; Digital Confidence: High</div>
+            <div class="persona-details">
+              <div>
+                <span class="label">Goals</span>
+                <p class="muted">Learn family history through playful, interactive discovery; stay connected with grandparents between visits.</p>
+              </div>
+              <div>
+                <span class="label">Pain Points</span>
+                <p class="muted">Family stories are told once and forgotten; traditional archives are boring; long text blocks lose attention quickly.</p>
+              </div>
+              <div>
+                <span class="label">Motivation Quote</span>
+                <p class="muted"><em>"The pocket watch reveal felt vivid and fun — I actually wanted to ask Grandpa more about it."</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- User Journey Map -->
+    <section class="container">
+      <div class="section-header">
+        <h2>User Journey Map</h2>
+        <p>Current pain points and how TimeLens addresses each stage</p>
+      </div>
+
+      <div class="card">
+        <div class="journey-map">
+          <div class="journey-stages">
+            <div class="journey-stage">
+              <div class="stage-num">1</div>
+              <h4>Discover</h4>
+              <p><strong>Action:</strong> Finds a meaningful keepsake at home</p>
+              <p><strong>Pain:</strong> Object has no context; story is locked in memory</p>
+              <p><strong>Solution:</strong> NFC tag links physical object to digital memory</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">2</div>
+              <h4>Tap / Scan</h4>
+              <p><strong>Action:</strong> Taps phone to NFC tag or uses manual fallback</p>
+              <p><strong>Pain:</strong> Older users unsure where to tap; devices vary</p>
+              <p><strong>Solution:</strong> Large tap target + visual feedback + fallback path</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">3</div>
+              <h4>Reveal</h4>
+              <p><strong>Action:</strong> Watches 3D memory scene unfold</p>
+              <p><strong>Pain:</strong> Text archives feel dry and unengaging</p>
+              <p><strong>Solution:</strong> Playful 3D reveal with story card and emotional audio</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">4</div>
+              <h4>Reply</h4>
+              <p><strong>Action:</strong> Reads and sends cross-generation messages</p>
+              <p><strong>Pain:</strong> One-way storytelling dies after a single telling</p>
+              <p><strong>Solution:</strong> Lightweight reply loop keeps memory alive</p>
+            </div>
+            <div class="journey-stage">
+              <div class="stage-num">5</div>
+              <h4>Revisit</h4>
+              <p><strong>Action:</strong> Returns to memory map over time</p>
+              <p><strong>Pain:</strong> Memories are scattered and hard to find again</p>
+              <p><strong>Solution:</strong> Collection map with unlock progress and revisit shortcut</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top: 1rem;">
+          <strong>Journey insight:</strong>
+          <p class="muted" style="margin-top: 0.35rem;">The strongest design signal is that interaction must start from the physical object, not a menu. This aligns with tangible interaction research <a class="cite-link" href="#r1">[1]</a><a class="cite-link" href="#r3">[3]</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Evidence of Life -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Evidence of Life</h2>
+        <p>Photos and clips from user interviews and site observations</p>
+      </div>
+
+      <div class="card">
+        <div class="grid-3">
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with team interviewing a grandparent user]
+            </div>
+            <div class="visual-caption">
+              <h4>Interview 1: Grandparent</h4>
+              <p class="muted">Semi-structured interview on family keepsake storytelling habits.</p>
+            </div>
+          </div>
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with team observing a family story-sharing session]
+            </div>
+            <div class="visual-caption">
+              <h4>Observation: Home Context</h4>
+              <p class="muted">Contextual observation of how keepsakes trigger family conversations.</p>
+            </div>
+          </div>
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with team interviewing a grandchild user]
+            </div>
+            <div class="visual-caption">
+              <h4>Interview 2: Grandchild</h4>
+              <p class="muted">Exploring digital-native expectations for family memory tools.</p>
+            </div>
+          </div>
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with prototype walkthrough session photo]
+            </div>
+            <div class="visual-caption">
+              <h4>Walkthrough: Prototype Testing</h4>
+              <p class="muted">Participant interacting with the Alpha prototype on a mobile device.</p>
+            </div>
+          </div>
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with questionnaire distribution scene]
+            </div>
+            <div class="visual-caption">
+              <h4>Survey: Questionnaire Distribution</h4>
+              <p class="muted">Collecting structured feedback from 24 mixed-role participants.</p>
+            </div>
+          </div>
+          <div class="visual-card">
+            <div style="background: var(--bg-soft); border-radius: 0.9rem; height: 160px; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); font-size: 0.85rem;">
+              [Replace with NFC tag demo setup photo]
+            </div>
+            <div class="visual-caption">
+              <h4>Tangible Demo: NFC Tag Setup</h4>
+              <p class="muted">Preparing NFC-tagged keepsakes for classroom demonstration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top: 1rem;">
+          <strong>Note to team:</strong>
+          <p class="muted" style="margin-top: 0.35rem;">The above are placeholders. Please replace each with a real photo or short video clip (5-10s) showing actual user research activity. Per PDF requirements, these must depict your group interviewing potential users or observing the site.</p>
         </div>
       </div>
     </section>

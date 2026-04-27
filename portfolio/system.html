@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/theme.js" defer></script>
   <script src="assets/js/ambient-audio.js" defer></script>
+  <script src="assets/js/scroll-animations.js" defer></script>
 </head>
 <body>
   <nav>
@@ -18,6 +19,7 @@
           <li><a href="research.html">Research</a></li>
           <li><a href="design.html">Design</a></li>
           <li><a href="system.html" class="active">System</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
           <li><a href="timeline.html">Timeline</a></li>
           <li><a href="index.html#prototype">Prototype</a></li>
         </ul>
@@ -131,58 +133,56 @@
         <p>Clear end-to-end flow from keepsake entry to shared memory revisits</p>
       </div>
 
-      <div class="card">
-        <div class="proto-structure-scroll">
-          <div class="proto-structure-track">
-            <article class="proto-node">
-              <div class="proto-node-step">Step 1</div>
-              <h4>Role Entry</h4>
-              <p class="muted">User opens the app and selects the storyteller identity.</p>
-              <img src="assets/images/screen-scan.png" alt="Role entry and scan start">
-            </article>
-
-            <div class="proto-link">→</div>
-
-            <article class="proto-node">
-              <div class="proto-node-step">Step 2</div>
-              <h4>Tap / Scan Trigger</h4>
-              <p class="muted">NFC-first entry, with a manual scan fallback path for unsupported devices.</p>
-              <img src="assets/images/screen-scanning.jpg" alt="Scanning transition">
-            </article>
-
-            <div class="proto-link">→</div>
-
-            <article class="proto-node">
-              <div class="proto-node-step">Step 3</div>
-              <h4>3D Memory Reveal</h4>
-              <p class="muted">A keepsake unlocks the story card and visual memory scene.</p>
-              <img src="assets/images/screen-memory.png" alt="3D memory reveal">
-            </article>
-
-            <div class="proto-link">→</div>
-
-            <article class="proto-node">
-              <div class="proto-node-step">Step 4</div>
-              <h4>Reply Loop</h4>
-              <p class="muted">Cross-generation replies keep the memory active as dialogue, not archive.</p>
-              <img src="assets/images/screen-messages.png" alt="Message loop">
-            </article>
-
-            <div class="proto-link">→</div>
-
-            <article class="proto-node">
-              <div class="proto-node-step">Step 5</div>
-              <h4>Memory Collection</h4>
-              <p class="muted">Users revisit memories through map and collection states over time.</p>
-              <img src="assets/images/screen-map.png" alt="Memory map and revisit">
-            </article>
+      <div class="proto-structure-track stagger-children">
+        <article class="proto-node">
+          <div class="proto-node-step">Step 1</div>
+          <div>
+            <h4>Role Entry</h4>
+            <p class="muted">User opens the app and selects the storyteller identity.</p>
           </div>
-        </div>
+          <img src="assets/images/screen-scan.png" alt="Role entry and scan start">
+        </article>
 
-        <div class="highlight-box" style="margin-top: 1rem;">
-          <strong>Core Loop:</strong>
-          <p class="muted" style="margin-top: 0.35rem;">Role select -> scan keepsake -> reveal memory -> reply -> collect and revisit.</p>
-        </div>
+        <article class="proto-node">
+          <div class="proto-node-step">Step 2</div>
+          <div>
+            <h4>Tap / Scan Trigger</h4>
+            <p class="muted">NFC-first entry, with a manual scan fallback path for unsupported devices.</p>
+          </div>
+          <img src="assets/images/screen-scanning.jpg" alt="Scanning transition">
+        </article>
+
+        <article class="proto-node">
+          <div class="proto-node-step">Step 3</div>
+          <div>
+            <h4>3D Memory Reveal</h4>
+            <p class="muted">A keepsake unlocks the story card and visual memory scene.</p>
+          </div>
+          <img src="assets/images/screen-memory.png" alt="3D memory reveal">
+        </article>
+
+        <article class="proto-node">
+          <div class="proto-node-step">Step 4</div>
+          <div>
+            <h4>Reply Loop</h4>
+            <p class="muted">Cross-generation replies keep the memory active as dialogue, not archive.</p>
+          </div>
+          <img src="assets/images/screen-messages.png" alt="Message loop">
+        </article>
+
+        <article class="proto-node">
+          <div class="proto-node-step">Step 5</div>
+          <div>
+            <h4>Memory Collection</h4>
+            <p class="muted">Users revisit memories through map and collection states over time.</p>
+          </div>
+          <img src="assets/images/screen-map.png" alt="Memory map and revisit">
+        </article>
+      </div>
+
+      <div class="highlight-box reveal" style="margin-top: 2rem;">
+        <strong>Core Loop:</strong>
+        <p class="muted" style="margin-top: 0.35rem;">Role select -> scan keepsake -> reveal memory -> reply -> collect and revisit.</p>
       </div>
     </section>
 
@@ -232,6 +232,97 @@
           <p class="muted"><strong>Risk:</strong> NFC capability differs by device model.<br><strong>Mitigation:</strong> Fallback unlock path included in prototype.</p>
           <p class="muted" style="margin-top:0.7rem;"><strong>Risk:</strong> 3D rendering overhead on low-end devices.<br><strong>Mitigation:</strong> Controlled model complexity and simpler effect stack.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-header">
+        <h2>Individual Contributions</h2>
+        <p>Exactly what each member built during the project</p>
+      </div>
+
+      <div class="card">
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Member</th>
+                <th>Student ID</th>
+                <th>Primary Role</th>
+                <th>What They Built</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Member A</strong><br>Chenlong Wei</td>
+                <td>2363235</td>
+                <td>Frontend Engineer</td>
+                <td>
+                  <ul style="margin:0; padding-left:1.1rem; font-size:0.9rem;">
+                    <li>React component architecture in App.jsx</li>
+                    <li>Responsive mobile-first layout and CSS</li>
+                    <li>QR / manual scan fallback integration</li>
+                    <li>LocalStorage persistence layer</li>
+                    <li>Prototype interaction polish and bug fixes</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Member B</strong><br>Zixuan Wang</td>
+                <td>2363717</td>
+                <td>3D &amp; Hardware Lead</td>
+                <td>
+                  <ul style="margin:0; padding-left:1.1rem; font-size:0.9rem;">
+                    <li>React Three Fiber 3D memory scene (HighEndHeirloom)</li>
+                    <li>Web NFC read/write implementation</li>
+                    <li>NFC tangible workflow and tag programming</li>
+                    <li>Haptic and audio feedback integration</li>
+                    <li>Demo script and video walkthrough planning</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Member C</strong><br>Puwei Fan</td>
+                <td>2362997</td>
+                <td>Research &amp; Portfolio</td>
+                <td>
+                  <ul style="margin:0; padding-left:1.1rem; font-size:0.9rem;">
+                    <li>Personas, journey map, and user requirements</li>
+                    <li>Portfolio website structure and all HTML/CSS content</li>
+                    <li>24-participant questionnaire design and analysis</li>
+                    <li>Research synthesis and storytelling flow</li>
+                    <li>Evaluation &amp; Reflection documentation</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Member D</strong><br>Wenhe Li</td>
+                <td>2364596</td>
+                <td>Testing &amp; Media</td>
+                <td>
+                  <ul style="margin:0; padding-left:1.1rem; font-size:0.9rem;">
+                    <li>3-person Alpha usability testing coordination</li>
+                    <li>Poster production and presentation media</li>
+                    <li>Evaluation summary and iterative feedback logs</li>
+                    <li>2-minute CHI-style video demo production</li>
+                    <li>Final submission review and quality checks</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>AI Disclosure</h3>
+        <p class="muted">
+          This project made substantive use of generative AI for code scaffolding, visual asset generation, and grammatical refinement,
+          in compliance with the CPT208 AI policy. The core design logic, user research findings, and "human-centric" justification are the group's original work.
+          All AI-generated components were manually reviewed, tested, and validated against user requirements.
+          Primary prompts and verification notes are documented in the
+          <a href="https://github.com/wnzgy/CPT208-Relation-between-Generations/tree/main/timelens/ai-logs" target="_blank" rel="noopener noreferrer">/timelens/ai-logs/</a> folder.
+        </p>
       </div>
     </section>
   </main>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" style="background: #f1f5f9;">
+  <!-- Phone frame -->
+  <rect x="10" y="10" width="300" height="620" rx="30" fill="#0f172a"/>
+  <rect x="20" y="30" width="280" height="580" rx="20" fill="#f8fafc"/>
+  
+  <!-- Header -->
+  <text x="40" y="70" fill="#0f172a" font-size="28" font-weight="bold">Map</text>
+  <text x="40" y="95" fill="#94a3b8" font-size="10">1 Items Remaining</text>
+  <text x="260" y="80" text-anchor="end" fill="#4f46e5" font-size="24" font-weight="bold">50%</text>
+  
+  <!-- Status card -->
+  <rect x="40" y="115" width="240" height="60" rx="15" fill="#e0e7ff"/>
+  <text x="55" y="140" fill="#4f46e5" font-size="9" font-weight="bold">COLLECTION STATUS</text>
+  <text x="55" y="160" fill="#0f172a" font-size="12">1 memory unlocked · 2 messages</text>
+  
+  <!-- Memory Card 1 (Unlocked) -->
+  <rect x="40" y="190" width="240" height="130" rx="20" fill="#fff" stroke="#4f46e5" stroke-width="2"/>
+  <circle cx="70" cy="225" r="20" fill="#e0e7ff"/>
+  <text x="70" y="232" text-anchor="middle" fill="#4f46e5" font-size="16">✓</text>
+  <rect x="210" y="210" width="55" height="20" rx="10" fill="#e0e7ff"/>
+  <text x="237" y="224" text-anchor="middle" fill="#4f46e5" font-size="9" font-weight="bold">Unlocked</text>
+  
+  <text x="100" y="255" fill="#0f172a" font-size="14" font-weight="bold">Pocket Watch</text>
+  <text x="100" y="275" fill="#94a3b8" font-size="10">1985 · Grandparent · 2 messages</text>
+  
+  <rect x="100" y="290" width="100" height="25" rx="12" fill="#4f46e5"/>
+  <text x="150" y="307" text-anchor="middle" fill="#fff" font-size="10">View memory</text>
+  
+  <!-- Memory Card 2 (Locked) -->
+  <rect x="40" y="335" width="240" height="110" rx="20" fill="#e2e8f0"/>
+  <circle cx="70" cy="370" r="20" fill="#cbd5e1"/>
+  <text x="70" y="377" text-anchor="middle" fill="#64748b" font-size="16">🔒</text>
+  <rect x="210" y="355" width="55" height="20" rx="10" fill="#cbd5e1"/>
+  <text x="237" y="369" text-anchor="middle" fill="#64748b" font-size="9" font-weight="bold">Locked</text>
+  
+  <text x="100" y="400" fill="#64748b" font-size="14" font-weight="bold">???</text>
+  <text x="100" y="420" fill="#94a3b8" font-size="10">Tap the NFC tag to unlock</text>
+</svg>

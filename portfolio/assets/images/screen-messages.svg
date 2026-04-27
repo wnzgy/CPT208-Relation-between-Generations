@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" style="background: #0f172a;">
+  <!-- Phone frame -->
+  <rect x="10" y="10" width="300" height="620" rx="30" fill="#0f172a"/>
+  
+  <!-- Dark top area -->
+  <rect x="20" y="30" width="280" height="250" rx="20" fill="#020617"/>
+  
+  <!-- Top bar -->
+  <rect x="40" y="50" width="60" height="30" rx="15" fill="#fff" opacity="0.1"/>
+  <text x="70" y="70" text-anchor="middle" fill="#fff" font-size="10">← Back</text>
+  
+  <!-- 3D mini view -->
+  <polygon points="160,150 180,180 160,210 140,180" fill="#6366f1" opacity="0.5"/>
+  
+  <!-- Messages panel -->
+  <rect x="20" y="260" width="280" height="350" rx="20" fill="#fff"/>
+  
+  <!-- Handle -->
+  <rect x="140" y="270" width="40" height="4" rx="2" fill="#cbd5e1"/>
+  
+  <!-- Title -->
+  <text x="40" y="300" fill="#0f172a" font-size="14" font-weight="bold">💬 Across-time dialogue</text>
+  
+  <!-- Message 1 (Grandchild) -->
+  <rect x="120" y="320" width="160" height="50" rx="10" fill="#e0e7ff"/>
+  <text x="130" y="340" fill="#4f46e5" font-size="8" font-weight="bold">Grandchild · Apr 6, 2:20 PM</text>
+  <text x="130" y="358" fill="#1e3a5f" font-size="10">Grandpa, why do you keep</text>
+  <text x="130" y="370" fill="#1e3a5f" font-size="10">this watch?</text>
+  
+  <!-- Message 2 (Grandparent) -->
+  <rect x="40" y="385" width="180" height="60" rx="10" fill="#fef3c7"/>
+  <text x="50" y="405" fill="#b45309" font-size="8" font-weight="bold">Grandparent · Apr 6, 2:22 PM</text>
+  <text x="50" y="423" fill="#78350f" font-size="10">I carried it when I traveled</text>
+  <text x="50" y="435" fill="#78350f" font-size="10">by ship in my youth. It reminds</text>
+  <text x="50" y="447" fill="#78350f" font-size="10">me of home.</text>
+  
+  <!-- Quick reply -->
+  <rect x="40" y="465" width="100" height="25" rx="12" fill="#f1f5f9"/>
+  <text x="90" y="482" text-anchor="middle" fill="#64748b" font-size="9">Tell me more</text>
+  
+  <!-- Input -->
+  <rect x="40" y="510" width="200" height="35" rx="17" fill="#f1f5f9"/>
+  <text x="55" y="532" fill="#94a3b8" font-size="10">What would you like to ask?</text>
+  <circle cx="260" cy="527" r="17" fill="#4f46e5"/>
+  <text x="260" y="532" text-anchor="middle" fill="#fff" font-size="12">→</text>
+</svg>

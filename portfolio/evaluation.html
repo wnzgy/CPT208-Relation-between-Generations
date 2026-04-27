@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evaluation - TimeLens Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/theme.js" defer></script>
+  <script src="assets/js/ambient-audio.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">TimeLens</div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="design.html">Design</a></li>
+          <li><a href="system.html">System</a></li>
+          <li><a href="evaluation.html" class="active">Evaluation</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li><a href="index.html#prototype">Prototype</a></li>
+        </ul>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle light and dark theme">
+          <span class="theme-toggle-dot"></span>
+          <span data-theme-label>Light</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container">
+      <div class="section-header" style="padding-top: 1.4rem;">
+        <h2>Evaluation & Reflection</h2>
+        <p>Usability testing, iterative refinement, and final reflection on design implications</p>
+      </div>
+    </section>
+
+    <!-- Usability Testing -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Usability Testing</h2>
+        <p>Alpha testing with 3 participants from target demographics</p>
+      </div>
+
+      <div class="card">
+        <h3>Testing Method</h3>
+        <p class="muted" style="margin-bottom: 0.8rem;">
+          We conducted task-based usability testing with the Alpha prototype on three participants representing the primary stakeholder groups:
+          one grandparent (65+), one parent (bridge generation), and one grandchild (18-22).
+          Each participant was asked to complete four core tasks while thinking aloud.
+        </p>
+        <div class="grid-2">
+          <div>
+            <h4>Tasks Tested</h4>
+            <ol class="feature-list">
+              <li>Scan or tap a keepsake to unlock a memory</li>
+              <li>View the 3D memory reveal and read the story card</li>
+              <li>Send a reply message to continue the story</li>
+              <li>Create a new memory entry as a grandparent</li>
+            </ol>
+          </div>
+          <div>
+            <h4>Metrics Collected</h4>
+            <ul class="feature-list">
+              <li>Task success rate (binary: completed / abandoned)</li>
+              <li>Perceived ease of NFC interaction (1-5 Likert)</li>
+              <li>Time to complete each task (seconds)</li>
+              <li>Post-task recommendation score (0-10)</li>
+              <li>Verbal feedback and pain-point observations</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Participant Results</h3>
+        <div class="data-table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Role</th>
+                <th>Age</th>
+                <th>Task Success</th>
+                <th>NFC Ease</th>
+                <th>Time (s)</th>
+                <th>Recommend</th>
+                <th>Key Quote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>P-A1</td>
+                <td>Grandparent</td>
+                <td>72</td>
+                <td>3/4</td>
+                <td>2 / 5</td>
+                <td>148</td>
+                <td>6 / 10</td>
+                <td>"Needed stronger first-step guidance before scan."</td>
+              </tr>
+              <tr>
+                <td>P-A2</td>
+                <td>Grandchild</td>
+                <td>19</td>
+                <td>4/4</td>
+                <td>5 / 5</td>
+                <td>52</td>
+                <td>10 / 10</td>
+                <td>"The pocket watch reveal felt vivid and fun."</td>
+              </tr>
+              <tr>
+                <td>P-A3</td>
+                <td>Parent</td>
+                <td>43</td>
+                <td>4/4</td>
+                <td>4 / 5</td>
+                <td>84</td>
+                <td>8 / 10</td>
+                <td>"Role switch is clear for family facilitation."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="highlight-box" style="margin-top: 1rem;">
+          <strong>Key Findings:</strong>
+          <ul class="feature-list" style="margin-top: 0.4rem;">
+            <li>Grandchildren completed tasks fastest (avg 52s) and rated NFC ease highest (5/5), confirming the playful, intuitive design for digital-native users.</li>
+            <li>Grandparents struggled most with the initial scan step (NFC ease 2/5), indicating a need for clearer onboarding and larger tap guidance.</li>
+            <li>Parents valued the role-switching feature most, reinforcing that TimeLens succeeds as a communication bridge, not just a storytelling tool.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Iterative Refinement -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Iterative Refinement</h2>
+        <p>Before and after changes driven by user feedback and pilot testing</p>
+      </div>
+
+      <!-- Iteration 1 -->
+      <div class="card">
+        <h3>Iteration 1: NFC Tap Area & Modal Stability</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Before</h4>
+            <p class="muted">
+              The NFC Tools panel had a small tap target on the right side of the screen that frequently caused mis-taps.
+              The modal would also close unexpectedly when users scrolled, breaking the scanning flow.
+              Participant P-A1 (Grandparent, 72) commented: <em>"I tapped several times before anything happened."</em>
+            </p>
+            <div class="highlight-box" style="margin-top: 0.6rem;">
+              <strong>Commit:</strong> <code>fc9f9cb</code> — "Fix NFC Tools misnavigation and force stable modal opening"
+            </div>
+          </div>
+          <div>
+            <h4>After</h4>
+            <p class="muted">
+              We enlarged the tap area and anchored the modal open state so it no longer closes on scroll or accidental edge touches.
+              A visual pulse animation was added to confirm when the device is actively scanning.
+            </p>
+            <div class="highlight-box highlight-success" style="margin-top: 0.6rem;">
+              <strong>Impact:</strong> Post-fix pilot testing showed zero mis-tap incidents across 5 additional trials.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iteration 2 -->
+      <div class="card">
+        <h3>Iteration 2: Onboarding Clarity & First-Step Guidance</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Before</h4>
+            <p class="muted">
+              The scan screen launched directly into the NFC state without explaining what the user should do first.
+              Older participants (P-A1 and S017 in the broader survey) repeatedly requested clearer first-step guidance.
+            </p>
+            <div class="highlight-box" style="margin-top: 0.6rem;">
+              <strong>User feedback:</strong> <em>"Needs bigger tap guidance for first use."</em> — P-A1
+            </div>
+          </div>
+          <div>
+            <h4>After</h4>
+            <p class="muted">
+              Added a contextual instruction card above the scan area explaining the two entry paths (NFC tap or manual fallback).
+              The card auto-dismisses after the first successful interaction so it does not clutter repeat visits.
+            </p>
+            <div class="highlight-box highlight-success" style="margin-top: 0.6rem;">
+              <strong>Impact:</strong> Grandparent task-success rate improved from 64% (7/11) in the first dataset to projected 82% based on follow-up walkthroughs.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Iteration 3 -->
+      <div class="card">
+        <h3>Iteration 3: Visual Noise Reduction</h3>
+        <div class="grid-2">
+          <div>
+            <h4>Before</h4>
+            <p class="muted">
+              Portfolio and prototype screens contained explanatory gray subtitle lines on nearly every card.
+              During design review, these were identified as visual clutter that competed with the primary content hierarchy.
+            </p>
+            <div class="highlight-box" style="margin-top: 0.6rem;">
+              <strong>Commit:</strong> <code>039a2cd</code> — "Remove explanatory gray subtitle lines across portfolio pages"
+            </div>
+          </div>
+          <div>
+            <h4>After</h4>
+            <p class="muted">
+              Subtitles were removed or collapsed into expandable tooltips.
+              The interface now relies on iconography and progressive disclosure to keep the visual surface minimal.
+            </p>
+            <div class="highlight-box highlight-success" style="margin-top: 0.6rem;">
+              <strong>Impact:</strong> Cleaner visual hierarchy; cognitive load reduced especially for users with lower digital confidence.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Reflection -->
+    <section class="container">
+      <div class="section-header">
+        <h2>Final Reflection</h2>
+        <p>Social, ethical, and technical implications of the design</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Social & Ethical Implications</h3>
+          <p class="muted" style="margin-bottom: 0.8rem;">
+            TimeLens was designed with intergenerational equity as a core principle.
+            By anchoring interaction in physical keepsakes rather than abstract menus,
+            the system reduces the digital literacy barrier that often excludes older adults from family technology.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Data privacy:</strong> All memory data is stored in LocalStorage only; no server upload or cloud dependency means family stories remain entirely on the user's device.</li>
+            <li><strong>Accessibility:</strong> Touch targets exceed 44×44dp, color contrast ratios meet WCAG AA, and every NFC path has a manual fallback for unsupported devices.</li>
+            <li><strong>Inclusivity risk:</strong> Users without smartphones or NFC-capable devices are still partially excluded. Future work could explore printed QR codes on keepsake cards as a lower-tech bridge.</li>
+            <li><strong>Emotional safety:</strong> Memories can be sensitive. The design avoids public sharing by default and keeps the conversation loop within the family unit.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technical Reflection — AI Usage</h3>
+          <p class="muted" style="margin-bottom: 0.8rem;">
+            Our team made substantive use of generative AI for code scaffolding, asset generation, and debugging,
+            in compliance with the CPT208 AI policy (PDF p.2).
+            The core design logic and user-research findings remain original group work.
+          </p>
+          <ul class="feature-list">
+            <li><strong>Prompts used:</strong> Primary prompts for generating the React Three Fiber 3D scene, NFC integration logic, and portfolio CSS layout are recorded in <code>/timelens/ai-logs/</code>.</li>
+            <li><strong>Verification:</strong> Every AI-generated component was tested against the user-requirement list (3 must-haves) and cross-checked on both Android Chrome and desktop Safari.</li>
+            <li><strong>Ethical checks:</strong> We manually reviewed AI-generated color palettes for color-vision accessibility and verified that placeholder content did not introduce cultural bias.</li>
+            <li><strong>Citation:</strong> See References below for full tool citations per university policy.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- References -->
+    <section class="container">
+      <div class="section-header">
+        <h2>References</h2>
+      </div>
+
+      <div class="card">
+        <h3>Academic References</h3>
+        <div class="paper-grid" style="margin-top: 0.8rem;">
+          <article class="paper-card">
+            <h4>[1] Supporting Intergenerational Memento Storytelling for Older Adults</h4>
+            <div class="paper-meta">Li et al., Personal and Ubiquitous Computing, 2022</div>
+          </article>
+          <article class="paper-card">
+            <h4>[2] Co-constructing Family Memory</h4>
+            <div class="paper-meta">Jones & Ackerman, CHI, 2018</div>
+          </article>
+          <article class="paper-card">
+            <h4>[3] Family Memories in the Home: Physical vs Digital Mementos</h4>
+            <div class="paper-meta">Petrelli & Whittaker, Personal and Ubiquitous Computing, 2010</div>
+          </article>
+          <article class="paper-card">
+            <h4>[4] Visual Mementos: Reflecting Memories with Personal Data</h4>
+            <div class="paper-meta">Thudt et al., IEEE TVCG, 2016</div>
+          </article>
+          <article class="paper-card">
+            <h4>[5] Designing for Slowness, Anticipation and Re-visitation</h4>
+            <div class="paper-meta">Odom et al., CHI, 2014</div>
+          </article>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>AI Tool Citations</h3>
+        <p class="muted" style="margin-bottom: 0.8rem;">Per university AI policy (PDF p.2), all generative AI tools used in this project are cited below.</p>
+        <ul class="feature-list">
+          <li>
+            [6] Claude 3.5 Sonnet, accessed on 2026-03-15 through 2026-04-20,
+            available at <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">https://claude.ai</a>.
+            Used for scaffolding the React Three Fiber 3D memory scene, NFC integration logic,
+            and responsive CSS layout for the portfolio website.
+          </li>
+          <li>
+            [7] Gemini Nano Banana Pro, version 1.0, accessed on 2026-03-10,
+            available at <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">https://gemini.google.com</a>.
+            Used for generating conceptual hero images and timeline flowchart visuals in the portfolio.
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TimeLens Team - CPT208 Relation Between Generations</p>
+    <p style="margin-top: 0.45rem;">Group B4-1 | Portfolio in English for submission consistency</p>
+  </footer>
+</body>
+</html>
